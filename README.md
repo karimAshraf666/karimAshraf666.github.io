@@ -37,6 +37,10 @@ python -c "import html5lib,io,glob;[print(f,len(html5lib.HTMLParser(strict=False
 
 More practically, after any edit confirm: all five pages parse with zero `html5lib` errors, no horizontal overflow at 1280px and 375px, every `assets/` reference resolves, and no em dashes. New SVG diagrams need a `min-width` and a scrolling container, or their text becomes illegible on a phone.
 
-## Publishing
+## Published
 
-Not published. Create a repository and publish only after Karim explicitly approves it.
+Live at **https://karimashraf666.github.io** via GitHub Pages, from `main` at the repo root.
+
+To update: commit and push to `main`. Pages rebuilds in a minute or two. Verify the live URL afterwards rather than trusting the build status.
+
+**Never commit `assets/money-fellows/`.** Those are real product screens and are not cleared for publication. They are gitignored, and a public repo exposes every committed file whether or not a page links it. Confirmed absent from the live site (404).
