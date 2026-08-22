@@ -1,0 +1,15 @@
+.DS_Store
+Thumbs.db
+*.log
+assets/*capture*.png
+assets/*source*.png
+assets/*profile*.png
+
+# Local editor config, not part of the site
+.claude/
+
+# Money Fellows product screens are NOT cleared for publication.
+# Karim's instruction 2026-08-20: business case study and technical work only,
+# screens and flows added later once cleared asset by asset.
+# No page references these, but a public repo would still expose them.
+assets/money-fellows/
