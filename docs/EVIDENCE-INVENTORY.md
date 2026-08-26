@@ -94,3 +94,18 @@ Public-safety key: **LOW** = sourced from public material or fully abstract. **M
 - Home page rebuild verified: all four internal case-study links and the résumé PDF return 200, every in-page anchor resolves to a real id, section numbers sequential, and no horizontal overflow at 1280px or 375px.
 - Money Fellows business facts checked against moneyfellows.com; Karim's own scope wording checked against his public UXcel profile summary.
 - New slot-position diagram given the same min-width scroll treatment as the existing diagrams, after it was caught rendering at an illegible 3.4px effective font on a 375px viewport.
+
+---
+
+## V8 recruiter and positioning pass | 2026-08-26
+
+The live site, local repository, résumé PDF, authenticated LinkedIn profile, public UXcel project grid, and the prior Claude portfolio task were reviewed together.
+
+- The homepage now identifies Karim directly as a Product Designer who turns complex product rules into clear customer decisions.
+- Product Design is explicitly the primary career lane. Product Owner and Product Manager fit is presented as adjacent value based on problem framing, business-rule mapping, prioritization, specification, alignment, metrics, and delivery.
+- Public project covers from the local UXcel-derived asset set are used for Bluworks, Sharwa, and 1MORETHING. Money Fellows keeps an original abstract cover and publishes no product interface.
+- Money Fellows copy was condensed around the decision journey from customer intent to a trusted next step. All existing verified figures remain unchanged.
+- Bluworks was curated from 42 published images to a smaller decision-led selection. The full public UXcel showcases remain linked for exhaustive evidence.
+- Sharwa was rewritten around three customer frictions and three product decisions. Its three reported measures and attribution caveat remain unchanged.
+- 1MORETHING was rewritten as three venture directions with AI uncertainty, fallback, and human review as the shared principle. It still makes no adoption, revenue, or production claim.
+- A detailed copy, journey, and acceptance standard is recorded in `docs/PORTFOLIO-REVIEW-V8.md`.
