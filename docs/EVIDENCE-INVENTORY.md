@@ -1,6 +1,6 @@
-# Evidence Inventory | V8 | 2026-08-22
+# Evidence Inventory | V8 | 2026-08-26
 
-Scope: local inspection and edits only (HTML pages, `assets/`, `docs/`, resume PDF). No publishing, no remotes, no git history changes.
+Scope: source review, evidence verification, accessibility QA, and publication through the repository's existing GitHub Pages workflow. Files reviewed include the HTML pages, `assets/`, `docs/`, and the résumé PDF.
 Sources cross-referenced: `index.html`, the four project pages, `docs/ASSET_INVENTORY.md`, `README.md`, on-disk assets, and direct view of the Bluworks and Money Fellows image files.
 Resume text was extracted on 2026-08-20 (pymupdf and pdfminer installed locally), and the public LinkedIn experience section was read in an authenticated browser session. Portfolio figures are now checked against both. Karim confirmed in session that the CV is the source of record for numbers, and that every project published on his UXcel profile is cleared to appear on the portfolio in the same way Bluworks already does.
 
@@ -112,7 +112,7 @@ The live site, local repository, résumé PDF, authenticated LinkedIn profile, p
 
 ---
 
-## V8 independent QA pass, 2026-08-22
+## V8 independent QA pass, 2026-08-26
 
 Reviewed the published V8 (commit `79c6b47`) as a senior product-design hiring manager and as a product leader hiring for an adjacent PO/PM role. Scope: clarity, hierarchy, responsiveness, accessibility, links, evidence fidelity, visual polish.
 
