@@ -1,4 +1,4 @@
-# Evidence Inventory | V8 | 2026-08-26
+# Evidence Inventory | V9 | 2026-08-28
 
 Scope: source review, evidence verification, accessibility QA, and publication through the repository's existing GitHub Pages workflow. Files reviewed include the HTML pages, `assets/`, `docs/`, and the résumé PDF.
 Sources cross-referenced: `index.html`, the four project pages, `docs/ASSET_INVENTORY.md`, `README.md`, on-disk assets, and direct view of the Bluworks and Money Fellows image files.
@@ -54,8 +54,8 @@ Public-safety key: **LOW** = sourced from public material or fully abstract. **M
 
 ## Cross-cutting notes
 
-- `assets/` also holds four UXcel skill-graph variants; `uxcel-skill-graph.png` is used in the `index.html` About block, now placed beside the copy on desktop. LOW risk (public UXcel snapshot). The recovered UXcel portrait stays excluded, per ASSET_INVENTORY.
-- The new home "AI in the practice" section describes how Karim uses AI (research synthesis, planning, prototyping, product operations) and presents Playful only as an independent, exploratory experiment. It claims no outcomes and lists no tools, so it carries no evidence risk.
+- `assets/` also holds UXcel skill-graph variants; `uxcel-skill-graph-clean.png` is used in the `index.html` About block, now placed beside the copy on desktop. The clean portfolio asset omits the account-level availability badge while preserving the graph itself. LOW risk (public UXcel snapshot). The recovered UXcel portrait stays excluded, per ASSET_INVENTORY.
+- Playful now has its own evidence-led case study rather than a generic AI-practice section. It names the live product doors, operating console, technical stack, shipped boundaries, and AI-assisted working method. Counts and screenshots were checked against production on 2026-08-28.
 - README rule honored: the cumulative "200+ research" claim is never used. The 70+ interviews figure is retained as the documented number.
 - Style rule honored: no em dash appears in any page copy or in this document. The Money Fellows page uses no raster images at all, so no baked-in punctuation is exposed there. Bluworks and Sharwa use product/showcase screens whose internal text is out of scope for editing.
 - Resume claims (dates, titles, metrics) remain UNVERIFIED-AGAINST-RESUME because PDF text extraction was blocked. Re-run once approved to confirm the page numbers match the resume exactly.
@@ -151,3 +151,43 @@ Reviewed the published V8 (commit `79c6b47`) as a senior product-design hiring m
 - With JavaScript disabled at mobile width the header nav cannot be opened, since it is behind the toggle. All content still renders and remains navigable through the in-content links and the brand link home, so the readability criterion holds.
 - Uppercase mono labels sit at 11px. This is an intentional editorial convention, is applied consistently, and passes contrast.
 - `assets/bluworks-uxcel/` (24 files) and most `assets/bluworks-tablet/` and `assets/1mt/` frames are unused after V8 curation. They are cleared public material and are kept for future passes rather than deleted.
+
+---
+
+## V9 portfolio expansion | 2026-08-28
+
+### Landing page and writing
+
+- Availability copy is now "Available for work" without a green status dot.
+- About includes verified UXcel practice plus Karim's user-provided personal details: arts and crafts, bouldering, the sea, animals, and being a cat dad of two.
+- UXcel has a direct profile CTA and a selected credential section. Certificate covers were acquired from the authenticated certificate pages and link back to the corresponding public credential URLs.
+- `blog.html` is a standalone destination, not a landing-page content section. It links Karim's one verified LinkedIn article, "Quick Guide Into User Branding in UX," published 19 June 2022.
+
+### UXcel credentials
+
+| Credential | ID | Verified source |
+|---|---|---|
+| UX Designer, professional certification | `HAUTNIWF5UN7` | `app.uxcel.com/certificates/HAUTNIWF5UN7` |
+| Design & Product Leadership | `7R6NK0NGIIER` | `app.uxcel.com/certificates/7R6NK0NGIIER` |
+| Enhancing UX Workflow with AI | `7RTYF5W7160H` | `app.uxcel.com/certificates/7RTYF5W7160H` |
+| Service Design Fundamentals | `UTZIQTQB5P46` | `app.uxcel.com/certificates/UTZIQTQB5P46` |
+| Design Thinking for Product Teams | `7NSWBXAB1K72` | `app.uxcel.com/certificates/7NSWBXAB1K72` |
+| Workshop Facilitation | `MXBZFJTTNA1W` | `app.uxcel.com/certificates/MXBZFJTTNA1W` |
+
+### Playful case study
+
+- Source of current truth: the live product at `playful-co.vercel.app`, the local Playful repository README, shipped route behavior, database architecture, and the authenticated founder console.
+- Public products verified live: Store, Ventures, Party, Paws, and Discover. District is a public portfolio map. The founder console is a separate authenticated operating surface.
+- Party exposed 10 games on the live catalogue on 2026-08-28. This is dated current evidence, not a permanent growth claim.
+- The case study keeps public limits explicit: Store checkout is off; Paws takes no booking or payment; Party is in beta; Discover does not yet connect viewing availability; Ventures links to the original venue or ticket source.
+- Technical claims are grounded in the repository: Next.js App Router, TypeScript, Supabase Postgres, the original seven domain-separated schemas plus the later `discovery` schema, magic-link identity, permissions, media, telemetry, audit logs, Vercel delivery, and GitHub source control.
+- The admin screenshot is cropped to the non-sensitive console navigation only. The account email, operational counts, costs, work queue, customer records, tokens, and private identifiers are excluded.
+- The case makes no revenue, conversion, adoption, or scale claim for Playful. It presents capabilities, current public state, working method, and lessons.
+
+### V9 verification
+
+- All seven HTML pages and every new asset returned 200 locally.
+- Every page has one `h1`, no horizontal overflow at 375px or 1280px, and zero browser console errors.
+- Mobile navigation opens, exposes all six landing-page links, and reports `aria-expanded=true`.
+- All local `href` and `src` targets resolve. New certificate and Playful images have nonzero file sizes and render when scrolled into view.
+- Zero em dashes appear in HTML or CSS. Existing Money Fellows confidentiality rules remain unchanged.

@@ -1,4 +1,4 @@
-# Karim Ashraf Portfolio | V8
+# Karim Ashraf Portfolio | V9
 
 A responsive, evidence-led portfolio for senior Product Designer opportunities and selected Product Owner or Product Manager roles. The site is static HTML, CSS, and JavaScript with no framework, database, tracking, or build step.
 
@@ -8,7 +8,9 @@ Published at **https://karimashraf666.github.io** from `main` at the repository 
 
 ## Structure
 
-- `index.html`: positioning, selected work, design versus product-ownership fit, experience, About, résumé, and contact.
+- `index.html`: positioning, selected work, design versus product-ownership fit, experience, About, UXcel credentials, résumé, and contact.
+- `blog.html`: standalone writing index linked from the site navigation.
+- `playful.html`: AI-assisted product-building case study for the live Playful platform and its operating system.
 - `money-fellows.html`: Goals, recommendations, onboarding, eligibility and limits, research, migration, and verified product measures.
 - `bluworks.html`: configurable HR web platform and the distinct fixed-tablet clock-in experience.
 - `sharwa.html`: group-buying behavior, home discovery, guided group order, and reported product movement.
@@ -39,7 +41,7 @@ Then open `http://localhost:4173`.
 
 ## Verification before publishing
 
-- Parse all five HTML pages.
+- Parse all seven HTML pages.
 - Confirm every local image and file reference resolves.
 - Confirm internal navigation targets exist.
 - Check desktop and mobile layouts for horizontal overflow.
