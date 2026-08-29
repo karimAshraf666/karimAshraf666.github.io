@@ -191,3 +191,45 @@ Reviewed the published V8 (commit `79c6b47`) as a senior product-design hiring m
 - Mobile navigation opens, exposes all six landing-page links, and reports `aria-expanded=true`.
 - All local `href` and `src` targets resolve. New certificate and Playful images have nonzero file sizes and render when scrolled into view.
 - Zero em dashes appear in HTML or CSS. Existing Money Fellows confidentiality rules remain unchanged.
+
+---
+
+## V10 resume realignment, 2026-08-29
+
+The source-of-record resume was rebuilt as a two-page document with a deliberately broader position. Portfolio copy was checked against it line by line.
+
+### New resume baseline
+
+- **Headline:** `Product Designer | Product Strategy, Growth and AI-Assisted Delivery`.
+- **Profile scope:** regulated services, SaaS, social commerce and AI-enabled ventures. Fintech is no longer the leading descriptor.
+- **Skills:** restructured into five transferable groups, one of which is AI-assisted product building.
+- **Playful:** now a distinct `SELECTED PRODUCT INITIATIVE` section, 2026, self-initiated, role stated as Founder, Product Designer and Product Owner.
+- **Credentials:** six named UXcel credentials, matching the six certificate cards on the site exactly.
+
+### Metrics recheck
+
+Every figure in the rebuilt resume still matches the site: 12%, 61.1%, 69.8%, 14%, 6,000+, approximately 48%, 70+ interviews, approximately 99%, migration in under two weeks, 7% to 14%, and 40% to 75%. No figure was added, changed, or removed. The approximately 48% entry-point figure remains in the resume only, since the site outcome band is explicitly a selected subset.
+
+### Portfolio changes made for alignment
+
+| Area | Before | After | Reason |
+|---|---|---|---|
+| Hero eyebrow | `Product designer / Cairo` | `Product designer / Product strategy, growth, and AI-assisted delivery / Cairo` | The resume headline now names three dimensions. The visible headline carried none of them. Fits one line to 768px and wraps to two at 375px. |
+| Hero deck | `My work spans fintech, HR software, social commerce, and AI-enabled ventures, from discovery through implementation review.` | `My work spans regulated services, SaaS, social commerce, and AI-enabled ventures, from discovery and prioritization through prototyping, delivery, and implementation review.` | The meta description had already been broadened but the visible hero still led with fintech, which is the exact narrowing the new position removes. Prioritization and delivery were added because the resume profile names them. |
+| Experience list | Four employers | Four employers plus Playful, marked `2026 / Selected product initiative` and `Self-initiated`, placed last | The resume carries Playful as its own section. Without it the two records disagreed in structure. Placed after the employers and given a dashed rule and accent date so it cannot be read as employment. |
+
+### Deliberately not changed
+
+- **Fintech as a project label.** `Money Fellows / Fintech` and `Regulated fintech, Egypt` remain, because they describe that project's actual domain rather than Karim's overall position.
+- **Cross-links naming fintech, B2B SaaS and social commerce** on the Playful and 1MORETHING pages describe the other case studies accurately and stay.
+- **No skills matrix was added.** The resume's five skill groups are already covered by the Positioning lanes, the Playful case study, and the credentials section. Adding a matrix would duplicate the Positioning section and lengthen the page against the V8 scanning standard.
+- **Positioning hierarchy untouched.** Product design remains the primary lane and product ownership the adjacent one, with evidence links on both.
+- **UXcel availability preserved.** The status card and the live UXcel profile both read Available for work.
+
+### Verification, 2026-08-29
+
+- Seven pages, contrast at 375px, 768px and 1280px: zero failures, minimum ratio 4.61.
+- Zero horizontal overflow at all three widths. No broken images.
+- The new accent-coloured initiative date measures 5.66 against the paper background.
+- Experience order confirmed in the DOM: Money Fellows, 1MORETHING, Bluworks, Sharwa, then Playful as the only entry flagged as an initiative.
+- Markup parses cleanly, one h1 per page, no heading skips, all links and assets resolve, no em dashes, and no page references `assets/money-fellows`.

@@ -8,7 +8,7 @@ Published at **https://karimashraf666.github.io** from `main` at the repository 
 
 ## Structure
 
-- `index.html`: positioning, selected work, design versus product-ownership fit, experience, About, UXcel credentials, résumé, and contact.
+- `index.html`: positioning, selected work, design versus product-ownership fit, experience including the Playful initiative, About, UXcel credentials, résumé download, and contact.
 - `blog.html`: standalone writing index linked from the site navigation.
 - `playful.html`: AI-assisted product-building case study for the live Playful platform and its operating system.
 - `money-fellows.html`: Goals, recommendations, onboarding, eligibility and limits, research, migration, and verified product measures.
@@ -31,6 +31,8 @@ Then open `http://localhost:4173`.
 ## Evidence rules
 
 - The résumé is the source of record for numbers. Résumé, LinkedIn, and portfolio must agree.
+- The résumé headline is `Product Designer | Product Strategy, Growth and AI-Assisted Delivery`, and the profile scope is regulated services, SaaS, social commerce, and AI-enabled ventures. Do not reintroduce fintech as the leading descriptor of Karim's overall position. Fintech stays only as the Money Fellows project label.
+- Product design is the primary lane and product ownership is adjacent. Keep both lanes evidence-linked and do not merge them into one hybrid title.
 - Never add the cumulative `200+ research` claim. The documented figure is 70+ Money Fellows interviews.
 - Do not publish any file in `assets/money-fellows/`. Product screens remain withheld until Karim clears them asset by asset.
 - UXcel-published work is cleared and should cite the specific public showcase.
