@@ -445,6 +445,20 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .outcome span { display: block; margin-top: 10px; font: 400 12px/1.5 var(--mono); text-transform: uppercase; }
 .evidence-note { max-width: 850px; margin: 34px 0 0; color: rgba(255, 255, 255, 0.92); font-size: 13px; }
 
+/* Named tooling inside a method section. Reads as a supporting note, not a product claim. */
+.tool-note {
+  max-width: 760px;
+  margin: 34px 0 0;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.tool-note .meta { margin: 0 0 10px; color: var(--accent); }
+.tool-note p + p { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.6; }
+.dark .tool-note { border-color: rgba(255, 255, 255, 0.26); background: rgba(255, 255, 255, 0.05); }
+.dark .tool-note .meta { color: var(--case-soft); }
+.dark .tool-note p + p { color: rgba(255, 255, 255, 0.82); }
+
 .quote {
   margin: 42px 0 0;
   padding: 28px 0 0;

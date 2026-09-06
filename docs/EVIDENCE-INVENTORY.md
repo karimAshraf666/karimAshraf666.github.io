@@ -233,3 +233,32 @@ Every figure in the rebuilt resume still matches the site: 12%, 61.1%, 69.8%, 14
 - The new accent-coloured initiative date measures 5.66 against the paper background.
 - Experience order confirmed in the DOM: Money Fellows, 1MORETHING, Bluworks, Sharwa, then Playful as the only entry flagged as an initiative.
 - Markup parses cleanly, one h1 per page, no heading skips, all links and assets resolve, no em dashes, and no page references `assets/money-fellows`.
+
+---
+
+## Video analyzer added to the Playful method, 2026-08-29
+
+Karim asked for a video-analyzer to be added to the vibe-coded work and documented.
+
+### What was verified before writing anything
+
+The term had no referent anywhere I could inspect: no mention in any portfolio file, no matching plugin in the claude.ai catalog (`SearchPlugins` returned nothing, and no plugins are enabled), nothing named video in the local Claude configuration or the official marketplace catalog, and no `/video`, `/analyzer`, `/video-analyzer` or `/tools` route on the live Playful product. Karim confirmed in session that it is **a tool in his AI build process**, not a Playful product feature, and that it **reviews screen recordings of the built product**.
+
+### How it is classified
+
+**Process and tooling, not a product capability.** This distinction is load-bearing. Playful's public claims are limited to the five product doors, the district, and the founder console, all of which are verifiable on the live site. A build-time tool is not a product surface and must never be counted among them. It therefore lives in section 05, AI-assisted method, and does not appear in the product portfolio, the product evidence section, or the outcome band.
+
+### What was written
+
+- **Step 04 of the build loop** now states that Karim records the running product and passes the video to an analyzer, because a screenshot cannot show a broken state that only appears mid-flow. Step 04 is the review step, so this is where the tool actually acts.
+- **A `.tool-note` block** below the loop describes the input, the output, the gap it covers between a diff and a screenshot, and its explicit limits: the output is a list of things to check rather than a verdict, and every finding is confirmed in the running product before any change is made.
+
+### Deliberate omissions
+
+- **No vendor or plugin name.** Karim did not name a specific product and none was discoverable, so the note describes the capability and its use rather than naming a tool. If a specific name should appear, it can be added in one line.
+- **No claimed outcome.** No count of bugs found, no time saved, no quality delta. None of that is evidenced, and the AI section's credibility depends on not inflating it.
+- **Not added to `What I learned`.** That section already covers verification as a principle. Repeating the point would duplicate rather than add.
+
+### Verification
+
+Note renders inside the dark method section at 11.57 contrast for the label and 10.27 for the body, fits at 1280px and 375px, and adds no horizontal overflow.

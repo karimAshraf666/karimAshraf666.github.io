@@ -48,7 +48,7 @@
 
     <section class="case-facts" aria-label="Project facts">
       <dl class="facts-inner">
-        <div class="fact"><dt>Role</dt><dd>Founder, product designer, product owner</dd></div>
+        <div class="fact"><dt>Role</dt><dd>Product manager &amp; product designer</dd></div>
         <div class="fact"><dt>Period</dt><dd>2026, ongoing</dd></div>
         <div class="fact"><dt>Scope</dt><dd>Strategy, UX, architecture, delivery, QA, operations</dd></div>
         <div class="fact"><dt>Stack</dt><dd>Next.js, TypeScript, Supabase, Vercel, GitHub, AI coding collaborators</dd></div>
@@ -139,9 +139,13 @@
             <li><b>01</b><div><strong>Frame the job and the non-goals.</strong><p>Every build starts with the customer job, operating owner, public promise, and what must remain off.</p></div></li>
             <li><b>02</b><div><strong>Turn intent into contracts.</strong><p>Routes, states, data ownership, permissions, failure paths, and acceptance checks give the AI collaborator less room to invent.</p></div></li>
             <li><b>03</b><div><strong>Build a complete vertical slice.</strong><p>UI, data, admin control, empty state, and responsive behavior move together before the pattern is repeated.</p></div></li>
-            <li><b>04</b><div><strong>Review production behavior, not generated confidence.</strong><p>I compare code, database behavior, browser output, console state, accessibility, and public copy before accepting the work.</p></div></li>
+            <li><b>04</b><div><strong>Review production behavior, not generated confidence.</strong><p>I compare code, database behavior, browser output, console state, accessibility, and public copy before accepting the work. I also record the running product and pass the video to an analyzer, because a screenshot cannot show a broken state that only appears mid-flow.</p></div></li>
             <li><b>05</b><div><strong>Keep documentation behind reality.</strong><p>When shipped behavior changes, the route contract, schema notes, verification scripts, and operational guidance have to change with it.</p></div></li>
           </ol>
+          <div class="tool-note">
+            <p class="meta">Tooling / Video analyzer</p>
+            <p>A screen recording of a real session goes in, and a list of observations comes back: states that break part-way through a flow, layout that fails at a specific width, moments where the interface stops matching the behavior I specified. It covers the gap between a diff, which shows what changed, and a screenshot, which shows one frame that happened to be working. I treat its output as a list of things to check, not a verdict, and every finding still gets confirmed in the running product before I change anything.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -168,7 +172,7 @@
             <article class="decision-card"><span>03 / Architecture</span><h3>The product model should shape the database model.</h3><p>Shared primitives reduce duplication, but clear domain ownership prevents an expanding platform from becoming an untraceable schema.</p></article>
             <article class="decision-card"><span>04 / Operations</span><h3>If nobody can manage it, it is not finished.</h3><p>Admin controls, audit trails, freshness rules, rollback, and diagnostics are part of the user experience even when customers never see them.</p></article>
             <article class="decision-card"><span>05 / Collaboration</span><h3>Prompting is direction, not delegation of responsibility.</h3><p>I remain accountable for the brief, tradeoffs, evidence, review depth, and public claim made by the shipped product.</p></article>
-            <article class="decision-card"><span>06 / Career fit</span><h3>This is where design and product ownership meet cleanly.</h3><p>The work combines interaction quality with prioritization, system boundaries, delivery sequencing, operational readiness, and technical fluency.</p></article>
+            <article class="decision-card"><span>06 / Career fit</span><h3>This is where design and product management meet cleanly.</h3><p>The work combines interaction quality with prioritization, system boundaries, delivery sequencing, operational readiness, and technical fluency.</p></article>
           </div>
         </div>
       </div>

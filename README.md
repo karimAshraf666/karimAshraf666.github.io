@@ -37,6 +37,7 @@ Then open `http://localhost:4173`.
 - Do not publish any file in `assets/money-fellows/`. Product screens remain withheld until Karim clears them asset by asset.
 - UXcel-published work is cleared and should cite the specific public showcase.
 - Attribute company facts and shared product outcomes accurately.
+- Keep build-time tooling separate from product capability. The Playful video analyzer is part of the AI-assisted method in section 05 and must never be listed among the product doors, the product evidence, or the outcome band.
 - Prime Talent Management Hub is AIESEC work, not 1MORETHING work.
 - The JumlatyPro showcase credits NOMU Group while the résumé places the work in the 1MORETHING period. Keep both statements visible.
 - Do not use em dashes in HTML or CSS.
