@@ -262,3 +262,25 @@ The term had no referent anywhere I could inspect: no mention in any portfolio f
 ### Verification
 
 Note renders inside the dark method section at 11.57 contrast for the label and 10.27 for the body, fits at 1280px and 375px, and adds no horizontal overflow.
+
+## Case-hero contrast correction, 2026-09-24
+
+Karim reported from the live site that the italic headline phrases on the case-study pages were hard to read.
+
+### Correction to earlier QA
+
+The V8 and V10 passes above record zero contrast failures with a minimum of 4.61. That was wrong. The check missed two real failures:
+
+- **Case-hero headline phrases.** `.case-hero h1 em` reused the site accent `#a43d31`, which reads well on the paper home page but sat at 1.20 to 2.63 on the five dark case backgrounds.
+- **Sharwa hero intro.** `.case-hero .hero-deck` is white at 0.82 opacity. On Sharwa's lighter blue `#196eb8` that measured 4.06, below the 4.5 body-text floor.
+
+The rebuilt check walks every element with its own text, including inline elements, and folds ancestor opacity into the text colour before compositing backgrounds.
+
+### Fix
+
+- New `--case-em` token: blush `#ffc2b0` by default, `#ffe9e0` on Sharwa. The home page keeps the red accent.
+- Sharwa's hero intro opacity raised to 0.94.
+
+### Verification
+
+Seven pages at 375px, 768px and 1280px, no text below 4.5. Headline phrases: Money Fellows 5.25, Bluworks 5.93, Sharwa 4.54, 1MORETHING 9.17, Playful 10.89. Hero intros: 5.92, 6.66, 4.81, 9.82, 11.34. Lowest ratio on any page: 4.54.

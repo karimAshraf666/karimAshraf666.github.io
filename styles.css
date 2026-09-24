@@ -158,8 +158,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   font-size: clamp(50px, 4.8vw, 76px);
   line-height: 0.98;
 }
-.home-hero h1 em,
-.case-hero h1 em { color: var(--accent); font-style: italic; }
+.home-hero h1 em { color: var(--accent); font-style: italic; }
+.case-hero h1 em { color: var(--case-em); font-style: italic; }
 .hero-deck {
   max-width: 680px;
   margin: 30px 0 32px;
@@ -333,10 +333,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .footer-inner a { text-decoration: none; }
 
 /* Case studies */
-.case-page { --case: var(--accent); --case-soft: #efe2dc; }
+.case-page { --case: var(--accent); --case-soft: #efe2dc; --case-em: #ffc2b0; }
 .case-page[data-theme='money'] { --case: #0b4e9d; --case-soft: #dbeeff; }
 .case-page[data-theme='bluworks'] { --case: #144d68; --case-soft: #dceef1; }
-.case-page[data-theme='sharwa'] { --case: #196eb8; --case-soft: #dceffc; }
+.case-page[data-theme='sharwa'] { --case: #196eb8; --case-soft: #dceffc; --case-em: #ffe9e0; }
 .case-page[data-theme='ventures'] { --case: #37204f; --case-soft: #eadff3; }
 .case-page[data-theme='playful'] { --case: #20114d; --case-soft: #e9e1ff; }
 .case-hero {
@@ -354,6 +354,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 .case-hero h1 { margin-top: 18px; font-size: clamp(50px, 5vw, 78px); line-height: 0.98; }
 .case-hero .hero-deck { color: inherit; opacity: 0.82; font-size: 19px; }
+.case-page[data-theme='sharwa'] .case-hero .hero-deck { opacity: 0.94; }
 .case-hero-media {
   min-height: 460px;
   overflow: hidden;
