@@ -99,7 +99,7 @@ story += section("Professional Experience")
 story += [
     role("Money Fellows", "Product Designer - Full-time", "Feb 2025 - Present", "Cairo, Egypt - Hybrid", [
         "Led research synthesis, journey design, prototyping and implementation review for the Goals experience, reaching 12% organic engagement, 61.1% conversion to goal creation and 69.8% conversion into the circle-join flow.",
-        "Designed recommendation entry points and bundle-selection journeys across Recommendation Engine phases 0-1, supporting 14% adoption, 6,000+ recommendation-driven bundles and approximately 48% conversion at high-performing new-user entry points.",
+        "Designed and iterated a high-conversion recommendation card and its entry journey across Recommendation Engine phases 0-1, supporting 14% adoption, more than 6,000 recommendation-led selections and approximately 48% conversion at high-performing new-user entry points.",
         "Synthesized insights from 70+ customer interviews and behavioral analysis into a clearer onboarding sequence and interaction guidance, reaching approximately 99% screen-to-screen conversion.",
         "Mapped current and future states, designed customer messaging and exception flows, and supported implementation for a high-priority migration delivered in under two weeks.",
         "Created journey maps, interaction flows, UI states and specifications for eligibility, limits, verification, recommendations and lifecycle changes, translating complex rules into clear customer decisions.",
