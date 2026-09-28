@@ -93,26 +93,25 @@ story += [
     p("<b>Discovery and growth:</b> Customer interviews, usability testing, funnel analysis, onboarding, activation, personalization, behavioral design, experimentation", "Skill"),
     p("<b>Product strategy and delivery:</b> Problem framing, MVP definition, prioritization, requirements, business-rule mapping, workshop facilitation, cross-functional delivery", "Skill"),
     p("<b>AI-assisted product building:</b> Research synthesis, rapid prototyping, specifications, edge-case exploration, backlog decomposition, agentic workflows, human validation", "Skill"),
-    p("<b>Tools:</b> Figma, FigJam, Miro, Maze, Mixpanel, Notion, Google Workspace, ChatGPT", "Skill"),
+    p("<b>Tools:</b> Figma, FigJam, Miro, Maze, Mixpanel, Firebase (experimentation), Notion, Google Workspace, ChatGPT, Claude", "Skill"),
 ]
 story += section("Professional Experience")
 story += [
     role("Money Fellows", "Product Designer - Full-time", "Feb 2025 - Present", "Cairo, Egypt - Hybrid", [
-        "Led the Goals experience from discovery through rollout, reaching 12% organic engagement, 61.1% conversion to goal creation and 69.8% conversion into the circle-join flow.",
-        "Contributed to Recommendation Engine phases 0-1, supporting 14% adoption, 6,000+ recommendation-driven bundles and approximately 48% conversion at high-performing new-user entry points.",
-        "Improved onboarding using insights from 70+ customer interviews and behavioral analysis, reaching approximately 99% screen-to-screen conversion across the optimized sequence.",
-        "Delivered a high-priority customer migration in under two weeks, aligning Product, Engineering, Risk, CRM/Marketing and Design across states, messaging, edge cases and handoff.",
-        "Designed complex, trust-sensitive journeys involving eligibility, limits, verification, recommendations and lifecycle changes, translating business and technical rules into clear customer decisions.",
+        "Led research synthesis, journey design, prototyping and implementation review for the Goals experience, reaching 12% organic engagement, 61.1% conversion to goal creation and 69.8% conversion into the circle-join flow.",
+        "Designed recommendation entry points and bundle-selection journeys across Recommendation Engine phases 0-1, supporting 14% adoption, 6,000+ recommendation-driven bundles and approximately 48% conversion at high-performing new-user entry points.",
+        "Synthesized insights from 70+ customer interviews and behavioral analysis into a clearer onboarding sequence and interaction guidance, reaching approximately 99% screen-to-screen conversion.",
+        "Mapped current and future states, designed customer messaging and exception flows, and supported implementation for a high-priority migration delivered in under two weeks.",
+        "Created journey maps, interaction flows, UI states and specifications for eligibility, limits, verification, recommendations and lifecycle changes, translating complex rules into clear customer decisions.",
     ]),
     role("1MORETHING Ventures", "Product Designer - Part-time", "Mar 2024 - Feb 2025", "Remote", [
-        "Turned ambiguous venture concepts into focused MVP scopes, end-to-end journeys, prototypes and decision-ready product direction.",
+        "Used journey mapping, interaction design and rapid prototyping to turn ambiguous venture concepts into focused MVP scopes and decision-ready product direction.",
         "Shaped Layla HR, Inveasy, Daaj and JumlatyPro across AI HR automation, computer-vision stock counting, grocery assistance and B2B ordering.",
         "Mapped AI uncertainty, fallback behavior and human-review paths so technical limitations were visible in the customer experience.",
-        "Connected user needs, business models and technical feasibility through flows, specifications, stakeholder reviews and delivery handoff.",
+        "Connected user needs, business models and technical feasibility through user flows, interface specifications, stakeholder reviews and delivery handoff.",
     ]),
 ]
 
-story += section("Professional Experience - Continued")
 story += [
     role("Bluworks", "Product Designer - Full-time", "Dec 2023 - Jun 2024", "Cairo, Egypt - Hybrid", [
         "Designed a distinct fixed-tablet clock-in experience in response to client safety and operational concerns, helping reopen sales opportunities while preserving relevant app functionality.",
