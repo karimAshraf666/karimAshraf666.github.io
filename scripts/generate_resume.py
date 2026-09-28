@@ -8,7 +8,6 @@ from reportlab.platypus import (
     Frame,
     HRFlowable,
     KeepTogether,
-    PageBreak,
     PageTemplate,
     Paragraph,
     Spacer,
@@ -113,7 +112,6 @@ story += [
     ]),
 ]
 
-story.append(PageBreak())
 story += section("Professional Experience - Continued")
 story += [
     role("Bluworks", "Product Designer - Full-time", "Dec 2023 - Jun 2024", "Cairo, Egypt - Hybrid", [
