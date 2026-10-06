@@ -14,7 +14,7 @@ if (header && menuButton) {
   });
 
   header.querySelectorAll('nav a').forEach((link) => {
-    link.addEventListener('click', closeMenu);
+    link.addEventListener('click', () => closeMenu());
   });
 
   document.addEventListener('keydown', (event) => {
