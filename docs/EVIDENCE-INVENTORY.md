@@ -1,4 +1,10 @@
-# Evidence Inventory | V9 | 2026-08-28
+# Evidence Inventory | Updated 2026-10-06
+
+## Current refresh
+
+The dated inventory below preserves the earlier evidence trail. Playful's August screen captures and counts are superseded by the 6 October review in `PORTFOLIO-REVIEW-V9.md`: production build `2cb1f28`, six featured Party games, four real-room beta team formats and 260 Store catalogue pieces. The current page uses October screenshots and source-checked implementation descriptions. No live Playful link is published. Money Fellows' 6,000+ measure is now labelled recommendation-led selections, not bundles, to avoid confusing it with a separately named feature.
+
+## Earlier evidence record
 
 Scope: source review, evidence verification, accessibility QA, and publication through the repository's existing GitHub Pages workflow. Files reviewed include the HTML pages, `assets/`, `docs/`, and the résumé PDF.
 Sources cross-referenced: `index.html`, the four project pages, `docs/ASSET_INVENTORY.md`, `README.md`, on-disk assets, and direct view of the Bluworks and Money Fellows image files.

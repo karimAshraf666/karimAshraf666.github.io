@@ -1,6 +1,6 @@
 # Karim Ashraf Portfolio | V9
 
-A responsive, evidence-led portfolio for senior Product Designer opportunities and selected Product Owner or Product Manager roles. The site is static HTML, CSS, and JavaScript with no framework, database, tracking, or build step.
+A responsive, evidence-led portfolio for senior Product Designer opportunities and selected Product Manager roles. The site is static HTML, CSS, and JavaScript with no framework, database, tracking, or build step.
 
 ## Live site
 
@@ -8,7 +8,7 @@ Published at **https://karimashraf666.github.io** from `main` at the repository 
 
 ## Structure
 
-- `index.html`: positioning, selected work, design versus product-ownership fit, experience including the Playful initiative, About, UXcel credentials, résumé download, and contact.
+- `index.html`: positioning, selected work, design versus product-management fit, experience including the Playful initiative, About, UXcel credentials, résumé download, and contact.
 - `blog.html`: standalone writing index linked from the site navigation.
 - `playful.html`: AI-assisted product-building case study for the live Playful platform and its operating system.
 - `money-fellows.html`: Goals, recommendations, onboarding, eligibility and limits, research, migration, and verified product measures.
@@ -18,7 +18,8 @@ Published at **https://karimashraf666.github.io** from `main` at the repository 
 - `styles.css`: shared visual system and responsive behavior.
 - `script.js`: mobile navigation and footer year.
 - `docs/EVIDENCE-INVENTORY.md`: source of truth for claims and public-safety decisions.
-- `docs/PORTFOLIO-REVIEW-V8.md`: recruiter, copy, positioning, and journey standard for this version.
+- `docs/PORTFOLIO-REVIEW-V8.md`: recruiter, copy, positioning, and journey standard.
+- `docs/PORTFOLIO-REVIEW-V9.md`: October Playful refresh, copy changes and responsive verification.
 
 ## Local preview
 
@@ -32,12 +33,14 @@ Then open `http://localhost:4173`.
 
 - The résumé is the source of record for numbers. Résumé, LinkedIn, and portfolio must agree.
 - The résumé headline is `Product Designer | Product Strategy, Growth and AI-Assisted Delivery`, and the profile scope is regulated services, SaaS, social commerce, and AI-enabled ventures. Do not reintroduce fintech as the leading descriptor of Karim's overall position. Fintech stays only as the Money Fellows project label.
-- Product design is the primary lane and product ownership is adjacent. Keep both lanes evidence-linked and do not merge them into one hybrid title.
+- Product design is the primary lane and product management is adjacent. Keep both lanes evidence-linked and do not merge them into one hybrid title.
 - Never add the cumulative `200+ research` claim. The documented figure is 70+ Money Fellows interviews.
 - Do not publish any file in `assets/money-fellows/`. Product screens remain withheld until Karim clears them asset by asset.
 - UXcel-published work is cleared and should cite the specific public showcase.
 - Attribute company facts and shared product outcomes accurately.
-- Keep build-time tooling separate from product capability. The Playful video analyzer is part of the AI-assisted method in section 05 and must never be listed among the product doors, the product evidence, or the outcome band.
+- Keep build-time tooling separate from product capability. The Playful video analyzer is part of the building method, not a customer-facing product or an outcome.
+- Do not add a live Playful link. Its portfolio case study uses approved public screenshots and source-checked implementation details instead.
+- Playful was refreshed on 6 October 2026 against production build `2cb1f28`. Do not reuse August screenshots or treat the older local `master` branch as the current deployed source.
 - Prime Talent Management Hub is AIESEC work, not 1MORETHING work.
 - The JumlatyPro showcase credits NOMU Group while the résumé places the work in the 1MORETHING period. Keep both statements visible.
 - Do not use em dashes in HTML or CSS.
