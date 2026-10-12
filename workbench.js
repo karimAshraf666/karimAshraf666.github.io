@@ -67,8 +67,14 @@
     cards.forEach((card) => { card.hidden = !visible.has(card); });
     $('resource-count').textContent = `${Math.min(limit, matches.length)} of ${matches.length} matching resources`;
     $('resource-empty').hidden = matches.length !== 0;
+    $('resource-empty').textContent = savedOnly && !store.saved.length ? 'Your saved resources will appear here. Use the star on a resource to keep it.' : 'No matching resources. Try another term or reset the search.';
     $('show-more').hidden = matches.length <= limit;
     $('show-more').textContent = `Show ${Math.min(9, matches.length - limit)} more resources`;
+    $('export-shortlist').hidden = !savedOnly || !store.saved.length;
+    $('clear-filters').hidden = industry === 'all' && kind === 'all' && !terms.length;
+    const refine = $('library-options').querySelector('summary');
+    refine.textContent = kind === 'all' ? 'Refine' : 'Refine · 1';
+    refine.title = kind === 'all' ? 'Filter by resource type' : `Resource type: ${kind}`;
   };
   cards.forEach((card) => {
     const button = card.querySelector('.bench-favorite'); button.hidden = false;
@@ -79,23 +85,22 @@
       persist(); updateFavorites(); filterLibrary();
     });
   });
-  document.querySelectorAll('[data-industry]').forEach((button) => {
-    button.addEventListener('click', () => {
-      industry = button.dataset.industry; limit = 9;
-      document.querySelectorAll('[data-industry]').forEach((other) => other.setAttribute('aria-pressed', String(other === button)));
-      filterLibrary();
-    });
+  $('resource-industry').addEventListener('change', () => {
+    industry = $('resource-industry').value; limit = 9; filterLibrary();
   });
   $('saved-only').addEventListener('click', () => {
-    savedOnly = !savedOnly; limit = 9;
-    $('saved-only').setAttribute('aria-pressed', String(savedOnly)); filterLibrary();
+    savedOnly = true; limit = 9;
+    $('saved-only').setAttribute('aria-pressed', 'true'); $('all-resources').setAttribute('aria-pressed', 'false'); filterLibrary();
+  });
+  $('all-resources').addEventListener('click', () => {
+    savedOnly = false; limit = 9;
+    $('saved-only').setAttribute('aria-pressed', 'false'); $('all-resources').setAttribute('aria-pressed', 'true'); filterLibrary();
   });
   ['resource-search','resource-type'].forEach((id) => $(id).addEventListener(id === 'resource-search' ? 'input' : 'change', () => { limit = 9; filterLibrary(); }));
   $('clear-filters').addEventListener('click', () => {
-    industry = 'all'; savedOnly = false; limit = 9;
+    industry = 'all'; limit = 9;
     $('resource-search').value = ''; $('resource-type').value = 'all';
-    $('saved-only').setAttribute('aria-pressed', 'false');
-    document.querySelectorAll('[data-industry]').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.industry === 'all')));
+    $('resource-industry').value = 'all';
     filterLibrary();
   });
   $('show-more').addEventListener('click', () => {
@@ -118,6 +123,13 @@
   });
   $('library-controls').hidden = false;
   updateFavorites(); filterLibrary();
+  const options = $('library-options');
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && options.open) { options.open = false; options.querySelector('summary').focus(); }
+  });
+  document.addEventListener('click', (event) => {
+    if (options.open && !options.contains(event.target)) options.open = false;
+  });
 
   // Native tab semantics and keyboard navigation.
   const tabs = [...document.querySelectorAll('.bench-tab')];

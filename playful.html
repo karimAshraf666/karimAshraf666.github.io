@@ -17,19 +17,22 @@
   <meta name="theme-color" content="#20114d" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23f4f1ea'/><text x='31' y='45' font-family='Georgia,serif' font-size='40' font-weight='600' text-anchor='middle' fill='%2315201c'>K</text><circle cx='52' cy='16' r='5' fill='%23a43d31'/></svg>" />
   <link rel="stylesheet" href="styles.css?v=20261006" />
+  <link rel="stylesheet" href="redesign.css?v=20261012b" />
 </head>
 <body class="case-page playful-case" data-theme="playful" id="top">
   <a class="skip-link" href="#case-summary">Skip to case study</a>
   <header class="site-header"><div class="header-inner">
-    <a class="brand" href="index.html" aria-label="Karim Ashraf portfolio home">Karim Ashraf<span>+</span></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" aria-label="Case study navigation"><a href="index.html#work">All work</a><a href="#capabilities">Experiences</a><a href="#architecture">Under the hood</a><a href="#lessons">Lessons</a><a href="index.html#contact">Contact</a></nav>
-  </div></header>
+      <a class="brand" href="index.html" aria-label="Karim Ashraf portfolio home"><span class="brand-mark" aria-hidden="true">K</span>Karim Ashraf</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" aria-label="Primary navigation">
+        <a href="index.html#work" aria-current="page">Work</a><a href="index.html#about">About</a><a href="workbench.html">Workbench</a><a href="index.html#contact">Contact</a><a class="nav-resume" href="Karim_Ashraf_Product_Designer_Resume_2026.pdf" target="_blank" rel="noopener noreferrer">Résumé ↗</a>
+      </nav>
+    </div></header>
   <main>
     <section class="case-hero"><div class="case-hero-inner">
       <div><p class="eyebrow">Playful / Founder, product manager &amp; designer / 2026</p>
-        <h1>A world for game nights, city days and <em>things worth keeping.</em></h1>
-        <p class="hero-deck">Playful is where I take a product beyond the design file. I shape the experience, direct AI-assisted development, inspect the working software and build the tools needed to run it.</p>
+        <h1>From a product idea<br /><em>to working software.</em></h1>
+        <p class="hero-deck">Playful is where I take a product beyond the design file. I shape the experience, direct AI-assisted development, review the working software and build the tools needed to run it.</p>
       </div>
       <figure class="case-hero-media screen"><img src="assets/playful/home-october-2026.jpg" alt="Playful's illustrated homepage with search and entry points for Party, Discover, Store and Outdoors" width="1440" height="1000" /></figure>
     </div></section>
@@ -38,10 +41,10 @@
       <div class="fact"><dt>Stage</dt><dd>Self-initiated, ongoing. Public experiences with beta and experimental areas.</dd></div>
       <div class="fact"><dt>Responsibility</dt><dd>Product direction, UX, visual design, architecture, AI-assisted delivery and QA</dd></div>
       <div class="fact"><dt>Core stack</dt><dd>Next.js, React, TypeScript, Supabase / Postgres, MapLibre, Vercel and GitHub</dd></div>
-    </dl></section>
+    </dl></section><nav class="case-reading-guide" aria-label="Case study sections"><span>In this story</span><a href="#case-summary">Overview</a><a href="#capabilities">Experiences</a><a href="#architecture">Implementation</a><a href="#lessons">Lessons</a></nav>
     <section class="case-section" id="case-summary"><div class="case-layout">
-      <p class="case-label">01 / The idea</p><div class="case-content">
-        <h2>Make it easier to find something you actually want to do.</h2>
+      <p class="case-label">The idea</p><div class="case-content">
+        <h2>Different moments needed different interactions.</h2>
         <p>Playful grew from the things I enjoy: games with friends, exploring Cairo, making things and caring for animals. The product brings those interests together without making every experience behave like the same app.</p>
         <div class="summary-grid">
           <article class="summary-card"><span>Product management</span><h3>Choose what to build and what to hold back.</h3><p>I define the purpose, first useful scope, constraints and release checks. A feature in the codebase is not automatically ready for customers.</p></article>
@@ -52,7 +55,7 @@
       </div>
     </div></section>
     <section class="case-section soft" id="capabilities"><div class="case-layout">
-      <p class="case-label">02 / Play together</p><div class="case-content">
+      <p class="case-label">Play together</p><div class="case-content">
         <h2>One shared screen. Everyone's phone. Different ways to play.</h2>
         <p>Party puts hosting and joining next to each other. Game cards show the player range, time and premise before someone opens a room. The current lineup includes word association, memory, social dilemmas, a rescue relay and stealth games, with past experiments kept separate.</p>
         <p class="media-hint">Select any project screen to inspect it at full size.</p>
@@ -64,7 +67,7 @@
       </div>
     </div></section>
     <section class="case-section"><div class="case-layout">
-      <p class="case-label">03 / Work together</p><div class="case-content">
+      <p class="case-label">Work together</p><div class="case-content">
         <h2>A workshop should leave the room with something useful.</h2>
         <p>Party for Teams extends the room system into four working formats: Warm Start, Idea Rally, Team Reset and Room Vote. Each is organized around a job and a takeaway, rather than a list of workshop features.</p>
         <div class="media-grid">
@@ -80,7 +83,7 @@
       </div>
     </div></section>
     <section class="case-section soft"><div class="case-layout">
-      <p class="case-label">04 / Head outdoors</p><div class="case-content">
+      <p class="case-label">Head outdoors</p><div class="case-content">
         <h2>Turn a vague wish to go out into a place and a plan.</h2>
         <p>Outdoors connects Ventures, Solo and Paws. Ventures brings together Cairo places and events, while Solo starts from the hesitation behind going alone. Paws adds pet-care discovery with direct provider contact rather than a booking promise.</p>
         <div class="media-grid">
@@ -92,7 +95,7 @@
       </div>
     </div></section>
     <section class="case-section"><div class="case-layout">
-      <p class="case-label">05 / Find and keep</p><div class="case-content">
+      <p class="case-label">Find and keep</p><div class="case-content">
         <h2>A shared identity without forcing a shared template.</h2>
         <div class="media-grid">
           <figure class="media-card"><img src="assets/playful/store-october-2026.jpg" alt="The Store's clothing editions and illustrated collection categories" width="1440" height="1000" loading="lazy" /><figcaption><strong>Store.</strong> The current catalogue has 260 pieces across home, bags, clothing, wall art and accessories. Browsing is open; checkout is not.</figcaption></figure>
@@ -104,7 +107,7 @@
       </div>
     </div></section>
     <section class="case-section dark" id="architecture"><div class="case-layout">
-      <p class="case-label">06 / Under the hood</p><div class="case-content">
+      <p class="case-label">Under the hood</p><div class="case-content">
         <h2>The experience reaches into the system behind it.</h2>
         <p>A Next.js and TypeScript application connects the products to Supabase authentication and Postgres. Domain-specific data sits alongside shared identity, media, permissions and operating controls. Vercel and GitHub support delivery.</p>
         <div class="decision-grid">
@@ -116,7 +119,7 @@
       </div>
     </div></section>
     <section class="case-section" id="lessons"><div class="case-layout">
-      <p class="case-label">07 / How I build</p><div class="case-content">
+      <p class="case-label">How I build</p><div class="case-content">
         <h2>AI helps me try more. The useful part is deciding what to keep.</h2>
         <p>I work in small, complete flows: define the job and constraints, describe the states, direct the implementation, inspect the browser and compare it with the source. When the result changes, the specifications and checks need to change too.</p>
         <div class="decision-grid">
@@ -135,6 +138,6 @@
     <section class="next-project"><div class="next-inner"><div><p class="eyebrow">More of my work</p><h2>The same attention to decisions, across very different products.</h2></div><a class="button" href="index.html#work">All case studies</a></div></section>
   </main>
   <footer class="site-footer"><div class="footer-inner"><a href="index.html">Portfolio home</a><span>© <span data-year></span></span></div></footer>
-  <script src="script.js?v=20261006"></script>
+  <script src="script.js?v=20261012b"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-# Karim Ashraf Portfolio | V9
+# Karim Ashraf Portfolio | V10
 
 A responsive, evidence-led portfolio for senior Product Designer opportunities and selected Product Manager roles. The site is static HTML, CSS, and JavaScript with no framework, database, tracking, or build step.
 
@@ -9,7 +9,7 @@ Published at **https://karimashraf666.github.io** from `main` at the repository 
 ## Structure
 
 - `index.html`: positioning, selected work, design versus product-management fit, experience including the Playful initiative, About, UXcel credentials, résumé download, and contact.
-- `blog.html`: standalone writing index linked from the site navigation.
+- `blog.html`: standalone writing index linked from About.
 - `workbench.html`: searchable industry resource library, practical specification/review tools, team templates and AI workflows.
 - `workbench.css` and `workbench.js`: scoped workbench layout and browser-local drafts/favorites.
 - `resources/workbench/`: reusable Markdown/CSV templates, resource catalog and downloadable team kit. Third-party assets stay at their source.
@@ -19,10 +19,13 @@ Published at **https://karimashraf666.github.io** from `main` at the repository 
 - `sharwa.html`: group-buying behavior, home discovery, guided group order, and reported product movement.
 - `one-more-thing.html`: Inveasy, Daaj, and JumlatyPro venture directions.
 - `styles.css`: shared visual system and responsive behavior.
-- `script.js`: mobile navigation and footer year.
+- `redesign.css`: floating navigation, image-led layouts, typography, responsive styles and optional motion.
+- `script.js`: mobile navigation, section state, scroll reveals, reading progress and footer year.
+- `scripts/portfolio_shell.py`: shared navigation and library controls used when rebuilding the workbench.
 - `docs/EVIDENCE-INVENTORY.md`: source of truth for claims and public-safety decisions.
 - `docs/PORTFOLIO-REVIEW-V8.md`: recruiter, copy, positioning, and journey standard.
 - `docs/PORTFOLIO-REVIEW-V9.md`: October Playful refresh, copy changes and responsive verification.
+- `docs/PORTFOLIO-REVIEW-V10.md`: October 12 visual refresh, simpler resource navigation and verification.
 
 ## Local preview
 
@@ -50,7 +53,7 @@ Then open `http://localhost:4173`.
 
 ## Verification before publishing
 
-- Parse all seven HTML pages.
+- Parse all root HTML pages and resource worksheets.
 - Confirm every local image and file reference resolves.
 - Confirm internal navigation targets exist.
 - Check desktop and mobile layouts for horizontal overflow.

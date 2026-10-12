@@ -1,6 +1,7 @@
 from pathlib import Path
 import html, json, zipfile, csv, io
 from workbench_resource_packages import build_resource_packages
+from portfolio_shell import simplify_workbench
 
 ROOT = Path(__file__).resolve().parents[1]
 KIT = ROOT / 'resources/workbench'
@@ -267,7 +268,7 @@ page = page.replace('href="resources/workbench/resource-catalog.json" download',
 page = page.replace('<meta name="twitter:card"', '<link rel="alternate" type="text/markdown" href="resources/workbench/AGENT-INDEX.md" title="AI agent resource index" /><meta name="twitter:card"')
 page = page.replace('Each resource includes a use case and a practical way to apply it with a team.', 'Each resource includes a human worksheet, a CSV template, and a Markdown working guide for AI agents.')
 page = page.replace('<a href="resources/workbench/README.md">Read the kit guide</a>', '<a href="resources/workbench/README.md">Read the kit guide</a><a href="resources/workbench/AGENT-INDEX.md">Browse AI agent guides →</a>')
-(ROOT / 'workbench.html').write_text(page, encoding='utf-8')
+(ROOT / 'workbench.html').write_text(simplify_workbench(page), encoding='utf-8')
 
 # Add a consistent entry point without overwriting prior task changes.
 for path in ROOT.glob('*.html'):
