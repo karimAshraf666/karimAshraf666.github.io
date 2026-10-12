@@ -10,6 +10,9 @@ Published at **https://karimashraf666.github.io** from `main` at the repository 
 
 - `index.html`: positioning, selected work, design versus product-management fit, experience including the Playful initiative, About, UXcel credentials, résumé download, and contact.
 - `blog.html`: standalone writing index linked from the site navigation.
+- `workbench.html`: searchable industry resource library, practical specification/review tools, team templates and AI workflows.
+- `workbench.css` and `workbench.js`: scoped workbench layout and browser-local drafts/favorites.
+- `resources/workbench/`: reusable Markdown/CSV templates, resource catalog and downloadable team kit. Third-party assets stay at their source.
 - `playful.html`: AI-assisted product-building case study for the live Playful platform and its operating system.
 - `money-fellows.html`: Goals, recommendations, onboarding, eligibility and limits, research, migration, and verified product measures.
 - `bluworks.html`: configurable HR web platform and the distinct fixed-tablet clock-in experience.
