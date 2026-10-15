@@ -1,7 +1,7 @@
 import re
 from workbench_navigation import build_navigation
 
-VERSION = '20261015c'
+VERSION = '20261015d'
 
 def apply_shell(text, name):
     home = name == 'index.html'

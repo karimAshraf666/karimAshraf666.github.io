@@ -44,7 +44,7 @@
   const cards = [...document.querySelectorAll('[data-resource]')];
   const views = {
     library: ['All resources', null, 'Browse references, tools and skills. Every resource includes a worksheet and an AI agent guide.'],
-    'ai-skills': ['AI skills', ['AI skills'], 'Agent workflows for web design, design systems, writing, research and motion. Open a skill or use its worksheet with a team.'],
+    'ai-skills': ['AI skills', ['AI skills'], 'Reusable workflows for design, motion and working with AI agents. Open a skill or use its worksheet with a team.'],
     'ui-kits': ['Systems & UI kits', ['Systems & UI kits'], 'Design libraries and component references for product interfaces.'],
     'ux-patterns': ['UX patterns', ['UX patterns'], 'References for recurring interaction problems, with a worksheet to adapt each pattern.'],
     'plugins-tools': ['Plugins & tools', ['Plugins','Tools'], 'Tools for research, accessibility, design delivery and content production. Provider access and plans vary.'],

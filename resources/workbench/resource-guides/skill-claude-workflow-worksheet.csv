@@ -1,0 +1,13 @@
+﻿Section,Prompt,Response,Evidence,Owner,Next action
+Reference,"A practical operating workflow for Claude: task alignment, focused context, appropriate effort and observable verification.",https://karimashraf666.github.io/resources/workbench/skills/claude-workflow/SKILL.md,,,
+Team exercise,"Take one recurring task, write its completion check and compare the result with the current approach.",,,,
+Review title,Name the bounded task.,,,,
+Owner and partners,"Who will do the work, review it and maintain the outcome?",,,,
+Client and task,Which Claude client/version and recurring task are involved?,,,,
+Current workflow,"What context, tools and instructions are actually used?",,,,
+Outcome and evidence,"What should improve, and what current evidence establishes the problem?",,,,
+Bounded change,"Choose one change in briefing, context or verification.",,,,
+Usage evidence,Record observed usage separately from estimates; mark unavailable data unknown.,,,,
+Verification,What actual result will you inspect?,,,,
+Decision,"Keep, adapt or stop based on the observed result.",,,,
+Decision and next action,"What is agreed, what remains open, who owns it and when will it be reviewed?",,,,

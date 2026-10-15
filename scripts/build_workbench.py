@@ -64,6 +64,25 @@ resources = [
  ('skill-film-joey','AI film skills by Joey','AI skills','commerce ai shared','Five free skills: Story Bible Builder, Castkit characters, Scenecraft plates, Shotcaller for Seedance and Motiondojo for motion transfer.','Use with the AI film pipeline when building characters, scenes and shot prompts for video models.','Lock one character face before building outfits or a character sheet.','Free from the author on Higgsfield','https://higgsfield.ai/@joeysnoisygroup/blogs/all-my-claude-skills-for-better-prompting'),
 ]
 
+# Claude workflow adaptations. Existing resources retain their earlier review date.
+claude_skills = [
+ ('skill-claude-workflow','Claude workflow','AI skills','shared saas commerce banking ai','A practical operating workflow for Claude: task alignment, focused context, appropriate effort and observable verification.','Use when briefing Claude or improving a team workflow across Claude Code, Cowork and chat. Commands depend on the client.','Take one recurring task, write its completion check and compare the result with the current approach.','Free SKILL.md with supporting guides; no API key or plugin required','https://karimashraf666.github.io/resources/workbench/skills/claude-workflow/SKILL.md'),
+ ('skill-task-brief','Agent task brief','AI skills','shared saas commerce banking ai','Turn an unclear request into a useful brief with sources, constraints and acceptance checks.','Use before substantial design, research or implementation work when the outcome or scope is unclear.','Brief one onboarding review using the existing component library and mark every material unknown.','Free SKILL.md and editable Markdown template','https://karimashraf666.github.io/resources/workbench/skills/agent-task-brief/SKILL.md'),
+ ('skill-context-handoff','Agent context handoff','AI skills','shared saas commerce banking ai','Preserve decisions, evidence, file state and next actions across long sessions and handoffs.','Use before compaction, a requested session transition or a change of approach after repeated failures.','Hand a bounded task to a teammate using the template, then check whether they can continue without repeating the audit.','Free SKILL.md and editable Markdown template','https://karimashraf666.github.io/resources/workbench/skills/agent-context-handoff/SKILL.md'),
+ ('skill-extension-review','Agent extension review','AI skills','shared saas commerce banking ai','Assess an AI skill, plugin, mod or connector before adding it to a workflow.','Use when an extension promises efficiency but its execution, access, context loading or maintenance cost is unclear.','Review one candidate at a named version and record what remains uninspected before recommending a pilot.','Free SKILL.md and editable Markdown template; review does not install anything','https://karimashraf666.github.io/resources/workbench/skills/agent-extension-review/SKILL.md'),
+]
+claude_references = [
+ ('claude-mistakes-video','23 Claude workflow mistakes','Articles & guidance','shared saas commerce banking ai','Jay E / RoboNuggets discusses habits that affect context, output quality and usage.','Use as a discussion starter; check changing product details against current documentation. The companion PDF requires community access.','Pick one relevant habit, propose a bounded workflow change and verify it on your own task.','Public video and transcript; linked community guide has separate access','https://www.youtube.com/watch?v=gvESqM6s0kM'),
+ ('claude-practices','Claude Code working practices','Articles & guidance','shared saas commerce banking ai','Official guidance on task context, verification, session management and reusable workflows.','Use when defining how a team briefs and checks agent-assisted implementation work.','Choose one real task and define a completion check that the agent can actually run.','Public Anthropic documentation; commands require a compatible Claude Code version','https://code.claude.com/docs/en/best-practices'),
+ ('claude-usage','Claude usage and context costs','Articles & guidance','shared saas commerce banking ai','Official guidance for interpreting usage, cache statistics and context costs.','Use when a workflow consumes unexpected usage or a proposed optimization needs evidence.','Record the client, model, available usage data and output quality before changing one workflow variable.','Public Anthropic documentation; subscription usage and API estimates differ','https://code.claude.com/docs/en/costs'),
+ ('claude-mcp','MCP connector setup and trust','Articles & guidance','shared saas commerce banking ai','Official reference for connecting tools, inspecting access and understanding tool discovery.','Use before proposing a new connector or changing a team integration.','Compare one bounded connector use case with the existing workflow and document permissions and a rollback path.','Public Anthropic documentation; workspace and provider permissions apply','https://code.claude.com/docs/en/mcp'),
+]
+first_skill = next(i for i, resource in enumerate(resources) if resource[2] == 'AI skills')
+resources[first_skill:first_skill] = claude_skills
+resources.extend(claude_references)
+claude_resource_ids = {r[0] for r in [*claude_skills, *claude_references]}
+claude_skill_folders = dict(zip([r[0] for r in claude_skills], ['claude-workflow','agent-task-brief','agent-context-handoff','agent-extension-review']))
+
 prompts = [
  ('states', 'Expand an interaction-state specification', 'Turn a bounded brief into a reviewable matrix of states and recovery paths.', '''Act as a product design partner. Use the supplied brief and existing component rules.
 Input: [user task], [platform], [existing pattern], [backend signals], [constraints].
@@ -220,8 +239,8 @@ for name, text in templates.items():
     (KIT / name).write_text(text, encoding='utf-8')
 
 packages = build_resource_packages(KIT, resources)
-catalog = [dict(zip(['id','name','type','industries','purpose','when','practice','access','url'], r)) | packages[i] for i,r in enumerate(resources)]
-(KIT / 'resource-catalog.json').write_text(json.dumps({'checked':'2026-10-12','resources':catalog}, indent=2, ensure_ascii=False), encoding='utf-8')
+catalog = [dict(zip(['id','name','type','industries','purpose','when','practice','access','url'], r)) | packages[i] | ({'checked':'2026-10-15'} if r[0] in claude_resource_ids else {}) for i,r in enumerate(resources)]
+(KIT / 'resource-catalog.json').write_text(json.dumps({'checked':'2026-10-12','catalogUpdated':'2026-10-15','resources':catalog}, indent=2, ensure_ascii=False), encoding='utf-8')
 with (KIT / 'resource-catalog.csv').open('w', newline='', encoding='utf-8-sig') as f:
     writer = csv.writer(f)
     writer.writerow(['Resource','Type','Industries','Purpose','When to use','Team practice','Access','Source URL','Human worksheet','CSV template','AI agent guide'])
@@ -240,6 +259,14 @@ with zipfile.ZipFile(KIT / 'design-ai-skills.zip', 'w', zipfile.ZIP_DEFLATED) as
     for path in sorted((KIT/'skills').rglob('*')):
         if path.is_file(): z.write(path, path.relative_to(KIT/'skills').as_posix())
 
+# Complete per-skill packages keep supporting files beside the entrypoint.
+downloads = KIT / 'skill-downloads'
+downloads.mkdir(exist_ok=True)
+for folder in claude_skill_folders.values():
+    with zipfile.ZipFile(downloads / f'{folder}.zip', 'w', zipfile.ZIP_DEFLATED) as z:
+        for path in sorted((KIT / 'skills' / folder).rglob('*')):
+            if path.is_file(): z.write(path, path.relative_to(KIT / 'skills').as_posix())
+
 def esc(s): return html.escape(s, quote=True)
 cards = '\n'.join(f'''<article class="bench-card bench-resource" data-resource="{r[0]}" data-type="{esc(r[2])}" data-industries="{r[3]}">
  <p class="eyebrow">{esc(r[2])}</p><h3>{esc(r[1])}</h3><p>{esc(r[4])}</p>
@@ -247,6 +274,12 @@ cards = '\n'.join(f'''<article class="bench-card bench-resource" data-resource="
  <details><summary>When to use &amp; team practice</summary><p>{esc(r[5])}</p><p><strong>Try with the team:</strong> {esc(r[6])}</p></details>
  <p class="bench-rule">{esc(r[7])}</p><div class="bench-resource-files"><a href="resources/workbench/resource-guides/{r[0]}-worksheet.html">Use team worksheet →<span class="visually-hidden">: {esc(r[1])}</span></a><a href="resources/workbench/resource-guides/{r[0]}-agent.md" download>Companion AI guide · MD ↓<span class="visually-hidden">: {esc(r[1])}</span></a></div>
 </article>''' for r in resources)
+for resource in claude_skills:
+    rid,title = resource[:2]
+    folder = claude_skill_folders[rid]
+    save_button = f'<button class="bench-favorite" type="button" aria-pressed="false" aria-label="Save {esc(title)}"'
+    package_link = f'<a href="resources/workbench/skill-downloads/{folder}.zip" download>Skill ZIP ↓<span class="visually-hidden">: {esc(title)}</span></a>'
+    cards = cards.replace(save_button, package_link + save_button)
 
 prompt_html = '\n'.join(f'''<details class="bench-prompt"><summary>{esc(p[1])}<small>{esc(p[2])}</small></summary><div class="bench-prompt-body"><pre id="prompt-{p[0]}">{esc(p[3])}</pre><p><strong>Human check:</strong> {esc(p[4])}</p><button class="bench-copy" type="button" data-copy="prompt-{p[0]}" hidden>Copy prompt</button></div></details>''' for p in prompts)
 
@@ -259,7 +292,7 @@ template_links = [
  ('industry-pattern-review.md','Industry pattern review','Adapt a reference to your users, platform and constraints.','MD'),
  ('ai-context-pack.md','AI context pack','Give an assistant component rules, evidence and acceptance criteria.','MD'),
  ('team-pilot.md','One-week team pilot','Try one improvement with partners before broader adoption.','MD'),
- ('design-ai-skills.zip','AI design skills','Seven agent skills: website craft, design loop, design DNA, agent-ready systems, component CRDs, motion graphics and AI film.','ZIP'),
+ ('design-ai-skills.zip','AI design skills',f'{len(list((KIT / "skills").glob("*/SKILL.md")))} reusable skills for design, motion, Claude workflows, task briefs, handoffs and extension reviews.','ZIP'),
 ]
 links = '\n'.join(f'<a class="bench-template" href="resources/workbench/{name}" download><span><strong>{title}</strong><small>{desc}</small></span><span>{kind} ↓</span></a>' for name,title,desc,kind in template_links)
 

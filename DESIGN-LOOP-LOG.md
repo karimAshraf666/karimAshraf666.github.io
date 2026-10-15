@@ -39,3 +39,11 @@ The identity, palette and global navigation remained as reviewed in Fidelity's f
 - Five distinct homepage previews total 1,426,465 fewer bytes than their originals. This is an asset comparison, not a measured page-speed score.
 
 Private screenshots are retained in the Career workspace under output/workbench-discovery/. No outstanding critic failures. Publication and live smoke checks are recorded in the delivery conversation.
+
+## Claude workflow resources, later on 2026-10-15
+
+Added four skills and four source references using the existing resource-card component. An independent screenshot reviewer returned PASS for fidelity, visible-card brief clarity and visual craft, with no required fixes. The reviewer saw the first two desktop cards and first mobile card; this was not a review of every resource or any interaction.
+
+The primary agent checked all four new skill names and package links in the rendered collection, expanded the collection from 12 to 15 skills, checked mobile overflow, and exported a filled task worksheet. Static verification now covers 68 pages, 617 local references and 59 resource packages. Complete per-skill ZIP contents are compared byte for byte with their source folders.
+
+The four skill entrypoints passed the skill-creator validator. A separate read-only forward test passed five scenarios covering a trivial edit, ambiguous work, context recovery, extension inspection and subscription-cost assumptions. No savings, successful third-party integration or runtime safety was inferred from those tests.

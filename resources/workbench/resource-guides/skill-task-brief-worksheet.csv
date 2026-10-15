@@ -1,0 +1,13 @@
+﻿Section,Prompt,Response,Evidence,Owner,Next action
+Reference,"Turn an unclear request into a useful brief with sources, constraints and acceptance checks.",https://karimashraf666.github.io/resources/workbench/skills/agent-task-brief/SKILL.md,,,
+Team exercise,Brief one onboarding review using the existing component library and mark every material unknown.,,,,
+Review title,Name the bounded task.,,,,
+Owner and partners,"Who will do the work, review it and maintain the outcome?",,,,
+Outcome and audience,"What should change, for whom, and how will the result be used?",,,,
+Sources and decisions,Link current evidence and decisions that must survive.,,,,
+Scope,What is included and excluded?,,,,
+Constraints and reasons,"Which constraints affect judgment, and why?",,,,
+Deliverable and acceptance,What output and observable checks establish completion?,,,,
+Unknowns,Which missing answer would materially change the solution?,,,,
+Next action,What authorized preparation can proceed now?,,,,
+Decision and next action,"What is agreed, what remains open, who owns it and when will it be reviewed?",,,,

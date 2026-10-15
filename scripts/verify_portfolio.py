@@ -45,4 +45,11 @@ for resource in catalog:
     for key in ['humanTemplate','csvTemplate','agentGuide']:assert (kit/resource[key]).is_file()
 for name in ['design-workbench-team-kit.zip','design-ai-skills.zip']:
     with zipfile.ZipFile(kit/name) as z:assert z.testzip() is None
+for archive in (kit/'skill-downloads').glob('*.zip'):
+    with zipfile.ZipFile(archive) as z:
+        assert z.testzip() is None
+        folder=kit/'skills'/archive.stem
+        expected={p.relative_to(kit/'skills').as_posix():p for p in folder.rglob('*') if p.is_file()}
+        assert set(z.namelist())==set(expected),f'Incomplete skill package: {archive.name}'
+        for name,path in expected.items():assert z.read(name)==path.read_bytes(),f'Stale skill file: {name}'
 print(f'Passed: {len(pages)} pages, {checked} local references, {len(ids)} resource packages, image dimensions, anchors and archive integrity.')

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Agent Extension Review"
+  short_description: "Reusable workflow for thoughtful agent-assisted work"
+  default_prompt: "Use $agent-extension-review for this task with the existing context and constraints."
+policy:
+  allow_implicit_invocation: true

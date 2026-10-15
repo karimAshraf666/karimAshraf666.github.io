@@ -1,5 +1,6 @@
 {
   "checked": "2026-10-12",
+  "catalogUpdated": "2026-10-15",
   "resources": [
     {
       "id": "confirmation",
@@ -492,6 +493,66 @@
       "agentGuide": "resource-guides/fishaudio-agent.md"
     },
     {
+      "id": "skill-claude-workflow",
+      "name": "Claude workflow",
+      "type": "AI skills",
+      "industries": "shared saas commerce banking ai",
+      "purpose": "A practical operating workflow for Claude: task alignment, focused context, appropriate effort and observable verification.",
+      "when": "Use when briefing Claude or improving a team workflow across Claude Code, Cowork and chat. Commands depend on the client.",
+      "practice": "Take one recurring task, write its completion check and compare the result with the current approach.",
+      "access": "Free SKILL.md with supporting guides; no API key or plugin required",
+      "url": "https://karimashraf666.github.io/resources/workbench/skills/claude-workflow/SKILL.md",
+      "humanTemplate": "resource-guides/skill-claude-workflow-worksheet.html",
+      "csvTemplate": "resource-guides/skill-claude-workflow-worksheet.csv",
+      "agentGuide": "resource-guides/skill-claude-workflow-agent.md",
+      "checked": "2026-10-15"
+    },
+    {
+      "id": "skill-task-brief",
+      "name": "Agent task brief",
+      "type": "AI skills",
+      "industries": "shared saas commerce banking ai",
+      "purpose": "Turn an unclear request into a useful brief with sources, constraints and acceptance checks.",
+      "when": "Use before substantial design, research or implementation work when the outcome or scope is unclear.",
+      "practice": "Brief one onboarding review using the existing component library and mark every material unknown.",
+      "access": "Free SKILL.md and editable Markdown template",
+      "url": "https://karimashraf666.github.io/resources/workbench/skills/agent-task-brief/SKILL.md",
+      "humanTemplate": "resource-guides/skill-task-brief-worksheet.html",
+      "csvTemplate": "resource-guides/skill-task-brief-worksheet.csv",
+      "agentGuide": "resource-guides/skill-task-brief-agent.md",
+      "checked": "2026-10-15"
+    },
+    {
+      "id": "skill-context-handoff",
+      "name": "Agent context handoff",
+      "type": "AI skills",
+      "industries": "shared saas commerce banking ai",
+      "purpose": "Preserve decisions, evidence, file state and next actions across long sessions and handoffs.",
+      "when": "Use before compaction, a requested session transition or a change of approach after repeated failures.",
+      "practice": "Hand a bounded task to a teammate using the template, then check whether they can continue without repeating the audit.",
+      "access": "Free SKILL.md and editable Markdown template",
+      "url": "https://karimashraf666.github.io/resources/workbench/skills/agent-context-handoff/SKILL.md",
+      "humanTemplate": "resource-guides/skill-context-handoff-worksheet.html",
+      "csvTemplate": "resource-guides/skill-context-handoff-worksheet.csv",
+      "agentGuide": "resource-guides/skill-context-handoff-agent.md",
+      "checked": "2026-10-15"
+    },
+    {
+      "id": "skill-extension-review",
+      "name": "Agent extension review",
+      "type": "AI skills",
+      "industries": "shared saas commerce banking ai",
+      "purpose": "Assess an AI skill, plugin, mod or connector before adding it to a workflow.",
+      "when": "Use when an extension promises efficiency but its execution, access, context loading or maintenance cost is unclear.",
+      "practice": "Review one candidate at a named version and record what remains uninspected before recommending a pilot.",
+      "access": "Free SKILL.md and editable Markdown template; review does not install anything",
+      "url": "https://karimashraf666.github.io/resources/workbench/skills/agent-extension-review/SKILL.md",
+      "humanTemplate": "resource-guides/skill-extension-review-worksheet.html",
+      "csvTemplate": "resource-guides/skill-extension-review-worksheet.csv",
+      "agentGuide": "resource-guides/skill-extension-review-agent.md",
+      "checked": "2026-10-15"
+    },
+    {
       "id": "skill-website-craft",
       "name": "Website craft skill",
       "type": "AI skills",
@@ -714,6 +775,66 @@
       "humanTemplate": "resource-guides/skill-film-joey-worksheet.html",
       "csvTemplate": "resource-guides/skill-film-joey-worksheet.csv",
       "agentGuide": "resource-guides/skill-film-joey-agent.md"
+    },
+    {
+      "id": "claude-mistakes-video",
+      "name": "23 Claude workflow mistakes",
+      "type": "Articles & guidance",
+      "industries": "shared saas commerce banking ai",
+      "purpose": "Jay E / RoboNuggets discusses habits that affect context, output quality and usage.",
+      "when": "Use as a discussion starter; check changing product details against current documentation. The companion PDF requires community access.",
+      "practice": "Pick one relevant habit, propose a bounded workflow change and verify it on your own task.",
+      "access": "Public video and transcript; linked community guide has separate access",
+      "url": "https://www.youtube.com/watch?v=gvESqM6s0kM",
+      "humanTemplate": "resource-guides/claude-mistakes-video-worksheet.html",
+      "csvTemplate": "resource-guides/claude-mistakes-video-worksheet.csv",
+      "agentGuide": "resource-guides/claude-mistakes-video-agent.md",
+      "checked": "2026-10-15"
+    },
+    {
+      "id": "claude-practices",
+      "name": "Claude Code working practices",
+      "type": "Articles & guidance",
+      "industries": "shared saas commerce banking ai",
+      "purpose": "Official guidance on task context, verification, session management and reusable workflows.",
+      "when": "Use when defining how a team briefs and checks agent-assisted implementation work.",
+      "practice": "Choose one real task and define a completion check that the agent can actually run.",
+      "access": "Public Anthropic documentation; commands require a compatible Claude Code version",
+      "url": "https://code.claude.com/docs/en/best-practices",
+      "humanTemplate": "resource-guides/claude-practices-worksheet.html",
+      "csvTemplate": "resource-guides/claude-practices-worksheet.csv",
+      "agentGuide": "resource-guides/claude-practices-agent.md",
+      "checked": "2026-10-15"
+    },
+    {
+      "id": "claude-usage",
+      "name": "Claude usage and context costs",
+      "type": "Articles & guidance",
+      "industries": "shared saas commerce banking ai",
+      "purpose": "Official guidance for interpreting usage, cache statistics and context costs.",
+      "when": "Use when a workflow consumes unexpected usage or a proposed optimization needs evidence.",
+      "practice": "Record the client, model, available usage data and output quality before changing one workflow variable.",
+      "access": "Public Anthropic documentation; subscription usage and API estimates differ",
+      "url": "https://code.claude.com/docs/en/costs",
+      "humanTemplate": "resource-guides/claude-usage-worksheet.html",
+      "csvTemplate": "resource-guides/claude-usage-worksheet.csv",
+      "agentGuide": "resource-guides/claude-usage-agent.md",
+      "checked": "2026-10-15"
+    },
+    {
+      "id": "claude-mcp",
+      "name": "MCP connector setup and trust",
+      "type": "Articles & guidance",
+      "industries": "shared saas commerce banking ai",
+      "purpose": "Official reference for connecting tools, inspecting access and understanding tool discovery.",
+      "when": "Use before proposing a new connector or changing a team integration.",
+      "practice": "Compare one bounded connector use case with the existing workflow and document permissions and a rollback path.",
+      "access": "Public Anthropic documentation; workspace and provider permissions apply",
+      "url": "https://code.claude.com/docs/en/mcp",
+      "humanTemplate": "resource-guides/claude-mcp-worksheet.html",
+      "csvTemplate": "resource-guides/claude-mcp-worksheet.csv",
+      "agentGuide": "resource-guides/claude-mcp-agent.md",
+      "checked": "2026-10-15"
     }
   ]
 }

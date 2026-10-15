@@ -10,13 +10,20 @@ FIELDS = {
  'Tools': [('Current implementation','Which tools, code library and review environment are already in use?'),('Bounded use case','What specific problem will this integration or tool solve?'),('Access and compatibility','Confirm plan/client/framework support and the relevant setup owner.'),('Pilot scope','Pick one component or journey and an explicit expected output.'),('Workflow and inputs','List authorized inputs, context and repeatable steps.'),('Acceptance checks','Define observable correctness and quality criteria.'),('Manual verification','What will design, engineering and QA each inspect?'),('Ownership and adoption','Name the owner, maintenance task and a decision to keep, adapt or stop.')],
 }
 
+RESOURCE_FIELDS = {
+ 'skill-claude-workflow': [('Client and task','Which Claude client/version and recurring task are involved?'),('Current workflow','What context, tools and instructions are actually used?'),('Outcome and evidence','What should improve, and what current evidence establishes the problem?'),('Bounded change','Choose one change in briefing, context or verification.'),('Usage evidence','Record observed usage separately from estimates; mark unavailable data unknown.'),('Verification','What actual result will you inspect?'),('Decision','Keep, adapt or stop based on the observed result.')],
+ 'skill-task-brief': [('Outcome and audience','What should change, for whom, and how will the result be used?'),('Sources and decisions','Link current evidence and decisions that must survive.'),('Scope','What is included and excluded?'),('Constraints and reasons','Which constraints affect judgment, and why?'),('Deliverable and acceptance','What output and observable checks establish completion?'),('Unknowns','Which missing answer would materially change the solution?'),('Next action','What authorized preparation can proceed now?')],
+ 'skill-context-handoff': [('Objective and latest direction','What is the current user objective?'),('Decisions and evidence','What exact facts, reasons and source locations must survive?'),('Current workspace','Record branch, changed files and unrelated user work to preserve.'),('Clearance and destinations','Record pending clearance, permitted use and authorized destination for confidential material.'),('Verification','Record checks actually run and their results.'),('Unresolved issues','Keep hypotheses and failed approaches separate from verified facts.'),('Authorization and next action','What is already authorized, what is pending, and what should happen next?')],
+ 'skill-extension-review': [('Need and alternative','What recurring need exists, and can the current tools solve it?'),('Exact source','Record publisher, version/commit and compatible client.'),('Inspection limits','Which manifests, scripts and dependencies were actually inspected?'),('Execution and access','What runs, what data is accessed, and where might it be sent?'),('Context and cost','Separate observed usage, estimates and unknowns.'),('License','What can the team use or redistribute?'),('Pilot and rollback','Define and verify recovery before any authorized installation or access change.'),('Recommendation','Keep current tools, pilot the extension or decline it; explain the evidence.')],
+}
+
 def build_resource_packages(kit, resources):
     folder=kit/'resource-guides'; folder.mkdir(exist_ok=True)
     metadata=[]
     esc=lambda x: html.escape(x,quote=True)
     for r in resources:
         rid,title,kind,industries,purpose,when,practice,access,url=r
-        fields=[('Review title','Name the bounded task.'),('Owner and partners','Who will do the work, review it and maintain the outcome?'),*FIELDS[kind],('Decision and next action','What is agreed, what remains open, who owns it and when will it be reviewed?')]
+        fields=[('Review title','Name the bounded task.'),('Owner and partners','Who will do the work, review it and maintain the outcome?'),*RESOURCE_FIELDS.get(rid,FIELDS[kind]),('Decision and next action','What is agreed, what remains open, who owns it and when will it be reviewed?')]
         with (folder/f'{rid}-worksheet.csv').open('w',newline='',encoding='utf-8-sig') as f:
             writer=csv.writer(f); writer.writerow(['Section','Prompt','Response','Evidence','Owner','Next action'])
             writer.writerow(['Reference',purpose,url,'','',''])

@@ -47,6 +47,7 @@ def build_navigation(page):
     page=page.replace('Turn a review into a useful team artifact.','Practical design tools').replace('Reusable files. A common way to work.','Team templates').replace('A small stack. A repeatable workflow.','Working practices')
     page=re.sub(r'(?<=>)0[1-4] / (?=[^<]+</p>)','',page)
     groups={'skill-website-craft':'Web & visual design','skill-design-loop':'Web & visual design','skill-design-dna':'Web & visual design','skill-scroll-craft':'Web & visual design','skill-agent-system':'Design systems','skill-component-crd':'Design systems','skill-humanizer':'Writing & research','skill-refero':'Writing & research','skill-motion-graphics':'Motion & film','skill-ai-film':'Motion & film','skill-film-joey':'Motion & film'}
+    groups.update({rid:'Agent workflows' for rid in ['skill-claude-workflow','skill-task-brief','skill-context-handoff','skill-extension-review']})
     for rid,group in groups.items():
         page=page.replace(f'data-resource="{rid}"',f'data-resource="{rid}" data-skill-group="{html.escape(group)}"')
         page=re.sub(rf'(data-resource="{rid}".*?<p class="eyebrow">)AI skills',lambda m:m[1]+html.escape(group),page,count=1,flags=re.S)

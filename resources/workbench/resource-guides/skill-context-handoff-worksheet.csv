@@ -1,0 +1,13 @@
+﻿Section,Prompt,Response,Evidence,Owner,Next action
+Reference,"Preserve decisions, evidence, file state and next actions across long sessions and handoffs.",https://karimashraf666.github.io/resources/workbench/skills/agent-context-handoff/SKILL.md,,,
+Team exercise,"Hand a bounded task to a teammate using the template, then check whether they can continue without repeating the audit.",,,,
+Review title,Name the bounded task.,,,,
+Owner and partners,"Who will do the work, review it and maintain the outcome?",,,,
+Objective and latest direction,What is the current user objective?,,,,
+Decisions and evidence,"What exact facts, reasons and source locations must survive?",,,,
+Current workspace,"Record branch, changed files and unrelated user work to preserve.",,,,
+Clearance and destinations,"Record pending clearance, permitted use and authorized destination for confidential material.",,,,
+Verification,Record checks actually run and their results.,,,,
+Unresolved issues,Keep hypotheses and failed approaches separate from verified facts.,,,,
+Authorization and next action,"What is already authorized, what is pending, and what should happen next?",,,,
+Decision and next action,"What is agreed, what remains open, who owns it and when will it be reviewed?",,,,

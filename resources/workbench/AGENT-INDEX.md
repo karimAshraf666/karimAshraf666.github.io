@@ -37,6 +37,10 @@ Reusable guides for bounded product design tasks. Read a relevant resource guide
 - **Higgsfield** (Tools; commerce ai shared): [Agent guide](resource-guides/higgsfield-agent.md) · [Human worksheet](resource-guides/higgsfield-worksheet.html)
 - **kie.ai** (Tools; commerce ai shared): [Agent guide](resource-guides/kieai-agent.md) · [Human worksheet](resource-guides/kieai-worksheet.html)
 - **Fish Audio** (Tools; commerce ai shared): [Agent guide](resource-guides/fishaudio-agent.md) · [Human worksheet](resource-guides/fishaudio-worksheet.html)
+- **Claude workflow** (AI skills; shared saas commerce banking ai): [Agent guide](resource-guides/skill-claude-workflow-agent.md) · [Human worksheet](resource-guides/skill-claude-workflow-worksheet.html)
+- **Agent task brief** (AI skills; shared saas commerce banking ai): [Agent guide](resource-guides/skill-task-brief-agent.md) · [Human worksheet](resource-guides/skill-task-brief-worksheet.html)
+- **Agent context handoff** (AI skills; shared saas commerce banking ai): [Agent guide](resource-guides/skill-context-handoff-agent.md) · [Human worksheet](resource-guides/skill-context-handoff-worksheet.html)
+- **Agent extension review** (AI skills; shared saas commerce banking ai): [Agent guide](resource-guides/skill-extension-review-agent.md) · [Human worksheet](resource-guides/skill-extension-review-worksheet.html)
 - **Website craft skill** (AI skills; commerce saas ai shared): [Agent guide](resource-guides/skill-website-craft-agent.md) · [Human worksheet](resource-guides/skill-website-craft-worksheet.html)
 - **Design loop skill** (AI skills; ai commerce saas shared): [Agent guide](resource-guides/skill-design-loop-agent.md) · [Human worksheet](resource-guides/skill-design-loop-worksheet.html)
 - **Design DNA skill** (AI skills; ai commerce shared): [Agent guide](resource-guides/skill-design-dna-agent.md) · [Human worksheet](resource-guides/skill-design-dna-worksheet.html)
@@ -53,5 +57,9 @@ Reusable guides for bounded product design tasks. Read a relevant resource guide
 - **Motion graphics skill** (AI skills; commerce saas ai shared): [Agent guide](resource-guides/skill-motion-graphics-agent.md) · [Human worksheet](resource-guides/skill-motion-graphics-worksheet.html)
 - **AI film pipeline skill** (AI skills; commerce ai shared): [Agent guide](resource-guides/skill-ai-film-agent.md) · [Human worksheet](resource-guides/skill-ai-film-worksheet.html)
 - **AI film skills by Joey** (AI skills; commerce ai shared): [Agent guide](resource-guides/skill-film-joey-agent.md) · [Human worksheet](resource-guides/skill-film-joey-worksheet.html)
+- **23 Claude workflow mistakes** (Articles & guidance; shared saas commerce banking ai): [Agent guide](resource-guides/claude-mistakes-video-agent.md) · [Human worksheet](resource-guides/claude-mistakes-video-worksheet.html)
+- **Claude Code working practices** (Articles & guidance; shared saas commerce banking ai): [Agent guide](resource-guides/claude-practices-agent.md) · [Human worksheet](resource-guides/claude-practices-worksheet.html)
+- **Claude usage and context costs** (Articles & guidance; shared saas commerce banking ai): [Agent guide](resource-guides/claude-usage-agent.md) · [Human worksheet](resource-guides/claude-usage-worksheet.html)
+- **MCP connector setup and trust** (Articles & guidance; shared saas commerce banking ai): [Agent guide](resource-guides/claude-mcp-agent.md) · [Human worksheet](resource-guides/claude-mcp-worksheet.html)
 
 Use supplied evidence and existing team rules. Mark uncertainty. Never claim a resource was adopted, a tool installed or an interaction tested without corresponding evidence.
