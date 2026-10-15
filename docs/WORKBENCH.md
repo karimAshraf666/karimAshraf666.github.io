@@ -4,12 +4,12 @@ The workbench supports reusable product design work across banking/finance, B2B 
 
 ## Structure
 
-- Resource library: 24 primary-source references, industry/type/search filters, saved items, shortlist export and progressive disclosure.
+- Resource library: 43 references, industry/type/search filters, saved items, shortlist export and progressive disclosure. The "AI skills" type holds agent skills: five hosted in `resources/workbench/skills/` (also bundled as `design-ai-skills.zip`) and three third-party skills linked at their GitHub source.
 - Practical tools: editable interaction-state specification, evidence-oriented quality review and proposed decision brief. Drafts are browser-local and can be exported to the team's existing workspace.
-- Team kit: eight general templates, four AI prompt workflows, CSV/JSON catalogs and an AI-agent index.
+- Team kit: eight general templates, the AI design skills bundle, four AI prompt workflows, CSV/JSON catalogs and an AI-agent index.
 - Per-resource files: self-contained HTML human worksheet, CSV worksheet and Markdown agent guide, with required inputs, output structure and acceptance checks.
 
-Third-party libraries and plugin assets are linked, not repackaged. Access notes distinguish public references, account/plan constraints, engineering setup and provider-specific scope. The catalog was checked against primary sources on 12 October 2026. Keep links and access notes current when editing the library.
+Third-party libraries and plugin assets are linked, not repackaged. Access notes distinguish public references, account/plan constraints, engineering setup and provider-specific scope. The catalog was checked against primary sources on 12 October 2026. AI design workflow sources and skills (Design DNA, ScrollCraft, the Hatch 2026 design-systems talk, the CRD article, reference and generation platforms) were added on 15 October 2026. Keep links and access notes current when editing the library.
 
 ## Maintenance
 

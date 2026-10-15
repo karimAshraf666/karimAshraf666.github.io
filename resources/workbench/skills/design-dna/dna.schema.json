@@ -1,0 +1,54 @@
+{
+  "$comment": "Design DNA record. Omit keys that genuinely don't apply. Full record lives here; only the load-bearing subset goes into PROMPT.md (<=2KB).",
+  "meta": {
+    "name": "Human name of the style",
+    "slug": "kebab-case, becomes the skill folder name",
+    "source": ["reference file paths or URLs"],
+    "captured": "YYYY-MM-DD",
+    "medium_of_origin": "website | poster | carousel | deck | email | motion",
+    "client": "client name, or 'personal'",
+    "not_copied": ["real logos, wordmarks, licensed photos, proprietary fonts that were substituted"]
+  },
+  "soul": {
+    "one_line": "max 160 chars, concrete nouns, no marketing words",
+    "adjectives": ["3-5"],
+    "lineage": "e.g. Swiss editorial / 90s rave flyer / brutalist / Vox explainer",
+    "read_distance": "thumb | arms-length | desk | room | street",
+    "energy": { "density": "1-10", "variance": "1-10", "contrast": "1-10", "warmth": "1-10" }
+  },
+  "palette": {
+    "colors": [{ "role": "background | text | accent | ...", "hex": "#000000", "name": "descriptive, e.g. 'dusty plum'" }],
+    "coverage": { "background": "62%", "text": "30%", "accent": "8%" },
+    "mode": "light | dark | both",
+    "banned": ["colour behaviours forbidden, e.g. 'no gradients on text', 'accent never as a background'"]
+  },
+  "type": {
+    "families": [{ "role": "display | body | mono", "family": "", "fallback": "REQUIRED", "weights": [], "licence_risk": "none | check | proprietary" }],
+    "scale": { "display_to_body_ratio": "the typographic signature, e.g. '8:1, never under 6:1'", "steps": "number of sizes", "max_sizes_per_frame": 3 },
+    "treatment": { "display_tracking": "", "body_leading": "", "case": "", "measure": "45-75ch", "numerals": "lining | oldstyle | tabular" }
+  },
+  "space": {
+    "grid": "e.g. 12-col, 4-col mobile",
+    "margin_pct": "outer margin as % of canvas width",
+    "gutter_pct": "",
+    "alignment": "left | centred | mixed (say where)",
+    "rhythm": "base unit and multiples",
+    "negative_space": "where the emptiness is and how big",
+    "safe_area": { "instagram_4x5": "", "slide_16x9": "", "mobile_web": "" }
+  },
+  "surface": {
+    "texture": { "kind": "grain | paper | none", "opacity": "", "scale": "", "stacking_order": "" },
+    "edges": "sharp | radius N% | mixed",
+    "elevation": "shadows allowed? which?",
+    "imagery": "photographic | illustrated | 3D | none; lighting, crop, treatment",
+    "iconography": "style, stroke, or 'none'"
+  },
+  "signatures": [{ "move": "named like a technique", "how": "AS A RATIO OR RELATIONSHIP", "when": "where it appears", "never": "how it gets misused" }],
+  "weird_move": { "what": "the single deliberate break in the system", "how": "", "why": "" },
+  "archetypes": [{ "id": "e.g. hero-split, quote-card, stat-wall", "purpose": "role in a sequence", "anatomy": "", "content_shape": "word/element budget" }],
+  "motion": { "easing": "", "durations": "", "entrances": "", "never_moves": "", "reduced_motion": "fallback" },
+  "voice": { "register": "", "sentence_length": "", "headline_shape": "", "banned_words": [] },
+  "bans": ["absolutes, minimum 5"],
+  "tests": [{ "id": "T1", "check": "binary, measurable", "fail_looks_like": "", "auto": true }],
+  "reconstruction": { "attempted": true, "gaps_found": [], "passes": 0 }
+}

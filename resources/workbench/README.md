@@ -16,6 +16,7 @@ Reusable templates by Karim Ashraf for product design teams. Start with one jour
 - Adapt an industry pattern: industry-pattern-review.md.
 - Guide an AI assistant: ai-context-pack.md and ai-workflows.md.
 - Introduce a workflow: team-pilot.md.
+- Run AI design workflows: skills/ (SKILL.md files for Claude Code, Codex and compatible agents).
 
 ## Per-resource packages
 Each resource has an editable HTML team worksheet, a CSV worksheet for spreadsheets, and a Markdown working guide for AI agents in resource-guides/. Start from AGENT-INDEX.md to choose an agent guide. resource-catalog.json provides the source URL and file mapping for every resource; resource-catalog.csv is a portable human-readable index.

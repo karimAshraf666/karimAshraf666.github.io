@@ -13,6 +13,7 @@ Published at **https://karimashraf666.github.io** from `main` at the repository 
 - `workbench.html`: searchable industry resource library, practical specification/review tools, team templates and AI workflows.
 - `workbench.css` and `workbench.js`: scoped workbench layout and browser-local drafts/favorites.
 - `resources/workbench/`: reusable Markdown/CSV templates, resource catalog and downloadable team kit. Third-party assets stay at their source.
+- `resources/workbench/skills/`: AI design skills (SKILL.md) published for Claude Code, Codex and compatible agents, plus `design-ai-skills.zip`. Edit them there, then rebuild.
 - `playful.html`: AI-assisted product-building case study for the live Playful platform and its operating system.
 - `money-fellows.html`: Goals, recommendations, onboarding, eligibility and limits, research, migration, and verified product measures.
 - `bluworks.html`: configurable HR web platform and the distinct fixed-tablet clock-in experience.
