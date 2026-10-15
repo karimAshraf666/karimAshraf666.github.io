@@ -1,1 +1,2 @@
 *.pdf binary
+resources/workbench/skills/** text eol=lf
