@@ -45,5 +45,13 @@ Reusable guides for bounded product design tasks. Read a relevant resource guide
 - **ScrollCraft** (AI skills; commerce saas ai): [Agent guide](resource-guides/skill-scroll-craft-agent.md) · [Human worksheet](resource-guides/skill-scroll-craft-worksheet.html)
 - **Humanizer** (AI skills; shared commerce saas ai banking): [Agent guide](resource-guides/skill-humanizer-agent.md) · [Human worksheet](resource-guides/skill-humanizer-worksheet.html)
 - **Refero design skill** (AI skills; saas commerce banking ai shared): [Agent guide](resource-guides/skill-refero-agent.md) · [Human worksheet](resource-guides/skill-refero-worksheet.html)
+- **Premium motion graphics with Claude** (Articles & guidance; commerce saas ai shared): [Agent guide](resource-guides/motion-video-agent.md) · [Human worksheet](resource-guides/motion-video-worksheet.html)
+- **Prompt Motion** (Tools; commerce saas ai shared): [Agent guide](resource-guides/prompt-motion-agent.md) · [Human worksheet](resource-guides/prompt-motion-worksheet.html)
+- **AI film workflow with Claude skills** (Articles & guidance; commerce ai shared): [Agent guide](resource-guides/aifilm-video-agent.md) · [Human worksheet](resource-guides/aifilm-video-worksheet.html)
+- **ElevenLabs** (Tools; commerce ai shared): [Agent guide](resource-guides/elevenlabs-agent.md) · [Human worksheet](resource-guides/elevenlabs-worksheet.html)
+- **Moises** (Tools; commerce ai shared): [Agent guide](resource-guides/moises-agent.md) · [Human worksheet](resource-guides/moises-worksheet.html)
+- **Motion graphics skill** (AI skills; commerce saas ai shared): [Agent guide](resource-guides/skill-motion-graphics-agent.md) · [Human worksheet](resource-guides/skill-motion-graphics-worksheet.html)
+- **AI film pipeline skill** (AI skills; commerce ai shared): [Agent guide](resource-guides/skill-ai-film-agent.md) · [Human worksheet](resource-guides/skill-ai-film-worksheet.html)
+- **AI film skills by Joey** (AI skills; commerce ai shared): [Agent guide](resource-guides/skill-film-joey-agent.md) · [Human worksheet](resource-guides/skill-film-joey-worksheet.html)
 
 Use supplied evidence and existing team rules. Mark uncertainty. Never claim a resource was adopted, a tool installed or an interaction tested without corresponding evidence.
