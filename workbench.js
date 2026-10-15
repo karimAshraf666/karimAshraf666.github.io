@@ -40,96 +40,148 @@
     }
   };
 
-  // Library controls enhance the static cards; all resources work without JS.
+  // Category routes share the original cards, IDs and browser-local Saved state.
   const cards = [...document.querySelectorAll('[data-resource]')];
-  let industry = 'all', savedOnly = false, limit = 9;
+  const views = {
+    library: ['All resources', null, 'Browse references, tools and skills. Every resource includes a worksheet and an AI agent guide.'],
+    'ai-skills': ['AI skills', ['AI skills'], 'Agent workflows for web design, design systems, writing, research and motion. Open a skill or use its worksheet with a team.'],
+    'ui-kits': ['Systems & UI kits', ['Systems & UI kits'], 'Design libraries and component references for product interfaces.'],
+    'ux-patterns': ['UX patterns', ['UX patterns'], 'References for recurring interaction problems, with a worksheet to adapt each pattern.'],
+    'plugins-tools': ['Plugins & tools', ['Plugins','Tools'], 'Tools for research, accessibility, design delivery and content production. Provider access and plans vary.'],
+    reading: ['Articles & guides', ['Articles & guidance'], 'Research, guidance and source material to support a design decision.'],
+    saved: ['Saved resources', null, 'Your personal shortlist. Saved resources stay in this browser and can be exported.']
+  };
+  let currentView = 'library', industry = 'all', limit = 12;
   const knownResources = new Set(cards.map((card) => card.dataset.resource));
   store.saved = store.saved.filter((id) => knownResources.has(id));
-  const updateFavorites = () => cards.forEach((card) => {
-    const button = card.querySelector('.bench-favorite');
-    const selected = store.saved.includes(card.dataset.resource);
-    const name = card.querySelector('h3').textContent;
-    button.setAttribute('aria-pressed', String(selected));
-    button.setAttribute('aria-label', `${selected ? 'Unsave' : 'Save'} ${name}`);
-    button.textContent = selected ? '★' : '☆';
+  const browse = $('workbench-navigation');
+  const compactBrowse = window.matchMedia('(max-width: 1000px)');
+  const closeBrowse = (focus = false) => {
+    if (compactBrowse.matches) {
+      browse.open = false;
+      if (focus) browse.querySelector('summary').focus();
+    }
+  };
+  browse.open = !compactBrowse.matches;
+  compactBrowse.addEventListener('change', () => { browse.open = !compactBrowse.matches; });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && browse.open && compactBrowse.matches) closeBrowse(true);
   });
+  const markSection = (section) => {
+    document.querySelectorAll('.bench-sidebar [data-library-view]').forEach((link) => {
+      if (section === 'library' && link.dataset.libraryView === currentView) link.setAttribute('aria-current','page');
+      else link.removeAttribute('aria-current');
+    });
+    document.querySelectorAll('.bench-sidebar [data-workbench-section]').forEach((link) => {
+      if (link.dataset.workbenchSection === section) link.setAttribute('aria-current','location');
+      else link.removeAttribute('aria-current');
+    });
+    const label = {tools:'Practical tools','team-kit':'Team templates','ai-workflows':'Reusable prompts',practices:'Working practices'};
+    $('browse-current').textContent = label[section] || views[currentView][0];
+  };
+  const updateFavorites = () => {
+    cards.forEach((card) => {
+      const button = card.querySelector('.bench-favorite');
+      const selected = store.saved.includes(card.dataset.resource);
+      const name = card.querySelector('h3').textContent;
+      button.setAttribute('aria-pressed', String(selected));
+      button.setAttribute('aria-label', `${selected ? 'Unsave' : 'Save'} ${name}`);
+      button.textContent = selected ? '★' : '☆';
+    });
+    document.querySelectorAll('[data-count="saved"]').forEach((node) => { node.textContent = store.saved.length; });
+  };
   const filterLibrary = () => {
     const terms = $('resource-search').value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
-    const kind = $('resource-type').value;
+    const kinds = views[currentView][1];
     const matches = cards.filter((card) => {
-      const haystack = `${card.textContent} ${card.dataset.industries}`.toLocaleLowerCase();
+      const haystack = `${card.textContent} ${card.dataset.type} ${card.dataset.industries}`.toLocaleLowerCase();
       return (industry === 'all' || card.dataset.industries.split(' ').includes(industry)) &&
-        (kind === 'all' || card.dataset.type === kind) &&
-        (!savedOnly || store.saved.includes(card.dataset.resource)) &&
+        (!kinds || kinds.includes(card.dataset.type)) &&
+        (currentView !== 'saved' || store.saved.includes(card.dataset.resource)) &&
         terms.every((term) => haystack.includes(term));
     });
     const visible = new Set(matches.slice(0, limit));
     cards.forEach((card) => { card.hidden = !visible.has(card); });
-    $('resource-count').textContent = `${Math.min(limit, matches.length)} of ${matches.length} matching resources`;
+    $('resource-count').textContent = `Showing ${Math.min(limit, matches.length)} of ${matches.length} resource${matches.length === 1 ? '' : 's'}`;
     $('resource-empty').hidden = matches.length !== 0;
-    $('resource-empty').textContent = savedOnly && !store.saved.length ? 'Your saved resources will appear here. Use the star on a resource to keep it.' : 'No matching resources. Try another term or reset the search.';
+    $('resource-empty').textContent = currentView === 'saved' && !store.saved.length ? 'Save a resource with its star button to keep it here.' : 'No resources match this search and industry. Clear them or search the full library.';
+    $('search-all-resources').hidden = matches.length !== 0 || currentView === 'library' || (currentView === 'saved' && !store.saved.length);
     $('show-more').hidden = matches.length <= limit;
-    $('show-more').textContent = `Show ${Math.min(9, matches.length - limit)} more resources`;
-    $('export-shortlist').hidden = !savedOnly || !store.saved.length;
-    $('clear-filters').hidden = industry === 'all' && kind === 'all' && !terms.length;
-    const refine = $('library-options').querySelector('summary');
-    refine.textContent = kind === 'all' ? 'Refine' : 'Refine · 1';
-    refine.title = kind === 'all' ? 'Filter by resource type' : `Resource type: ${kind}`;
+    $('show-more').textContent = `Show ${Math.min(12, Math.max(0,matches.length - limit))} more resources`;
+    $('export-shortlist').hidden = currentView !== 'saved' || !store.saved.length;
+    $('clear-filters').hidden = industry === 'all' && !terms.length;
   };
+  const selectView = (key, { navigate = false, preserveSearch = false } = {}) => {
+    if (!views[key]) return;
+    currentView = key; limit = 12;
+    if (!preserveSearch) { industry = 'all'; $('resource-industry').value = 'all'; $('resource-search').value = ''; }
+    $('library-title').textContent = views[key][0];
+    $('library-description').textContent = views[key][2];
+    $('browse-current').textContent = views[key][0];
+    $('resource-search').placeholder = key === 'library' ? 'Search resources' : `Search ${views[key][0].toLocaleLowerCase()}`;
+    markSection('library');
+    filterLibrary();
+    if (navigate) {
+      if (location.hash !== `#${key}`) history.pushState(null,'',`#${key}`);
+      closeBrowse();
+      $('library-title').focus({preventScroll:true});
+      $('library').scrollIntoView({block:'start'});
+    }
+  };
+  document.querySelectorAll('[data-library-view]').forEach((link) => {
+    link.addEventListener('click', (event) => { event.preventDefault(); selectView(link.dataset.libraryView,{navigate:true}); });
+  });
+  document.querySelectorAll('.bench-sidebar [data-workbench-section]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const section = $(link.dataset.workbenchSection);
+      if (location.hash !== link.hash) history.pushState(null,'',link.hash);
+      closeBrowse(); markSection(section.id);
+      const heading = section.querySelector('h2');
+      heading.tabIndex = -1; heading.focus({preventScroll:true}); section.scrollIntoView({block:'start'});
+    });
+  });
+  const syncLibraryRoute = () => { const key = location.hash.slice(1) || 'library'; if (views[key]) selectView(key); };
+  window.addEventListener('hashchange',syncLibraryRoute);
+  window.addEventListener('popstate',syncLibraryRoute);
   cards.forEach((card) => {
     const button = card.querySelector('.bench-favorite'); button.hidden = false;
     button.addEventListener('click', () => {
       const id = card.dataset.resource;
-      const selected = store.saved.includes(id);
-      store.saved = selected ? store.saved.filter((x) => x !== id) : [...store.saved, id];
+      store.saved = store.saved.includes(id) ? store.saved.filter((x) => x !== id) : [...store.saved,id];
       persist(); updateFavorites(); filterLibrary();
     });
   });
-  $('resource-industry').addEventListener('change', () => {
-    industry = $('resource-industry').value; limit = 9; filterLibrary();
-  });
-  $('saved-only').addEventListener('click', () => {
-    savedOnly = true; limit = 9;
-    $('saved-only').setAttribute('aria-pressed', 'true'); $('all-resources').setAttribute('aria-pressed', 'false'); filterLibrary();
-  });
-  $('all-resources').addEventListener('click', () => {
-    savedOnly = false; limit = 9;
-    $('saved-only').setAttribute('aria-pressed', 'false'); $('all-resources').setAttribute('aria-pressed', 'true'); filterLibrary();
-  });
-  ['resource-search','resource-type'].forEach((id) => $(id).addEventListener(id === 'resource-search' ? 'input' : 'change', () => { limit = 9; filterLibrary(); }));
-  $('clear-filters').addEventListener('click', () => {
-    industry = 'all'; limit = 9;
-    $('resource-search').value = ''; $('resource-type').value = 'all';
-    $('resource-industry').value = 'all';
-    filterLibrary();
-  });
+  $('resource-industry').addEventListener('change', () => { industry = $('resource-industry').value; limit = 12; filterLibrary(); });
+  $('resource-search').addEventListener('input', () => { limit = 12; filterLibrary(); });
+  $('clear-filters').addEventListener('click', () => { industry = 'all'; $('resource-industry').value = 'all'; $('resource-search').value = ''; limit = 12; filterLibrary(); });
+  $('search-all-resources').addEventListener('click', () => { industry = 'all'; $('resource-industry').value = 'all'; selectView('library',{navigate:true,preserveSearch:true}); });
   $('show-more').addEventListener('click', () => {
     const oldVisible = cards.filter((card) => !card.hidden).length;
-    limit += 9; filterLibrary();
-    const newlyShown = cards.filter((card) => !card.hidden)[oldVisible];
-    if (newlyShown) newlyShown.querySelector('a').focus({ preventScroll: true });
+    limit += 12; filterLibrary();
+    const next = cards.filter((card) => !card.hidden)[oldVisible];
+    if (next) next.querySelector('a').focus({preventScroll:true});
   });
   $('export-shortlist').addEventListener('click', () => {
     const selected = cards.filter((card) => store.saved.includes(card.dataset.resource));
-    if (!selected.length) { $('resource-count').textContent = 'Save a resource with the star button before exporting a list.'; return; }
+    if (!selected.length) return;
     const text = '# Design Workbench resource shortlist\n\n' + selected.map((card) => {
       const name = card.querySelector('h3').textContent;
       const purpose = card.querySelector('h3 + p').textContent;
-      const guidance = [...card.querySelectorAll('details p')].map((paragraph) => paragraph.textContent.trim()).join('\n\n');
+      const guidance = [...card.querySelectorAll('details p')].map((p) => p.textContent.trim()).join('\n\n');
       return `## ${name}\nReference: ${card.querySelector('[data-source-link]').href}\nHuman worksheet: ${card.querySelector('.bench-resource-files a').href}\nAI agent guide: ${card.querySelector('.bench-resource-files a[download]').href}\n\n${purpose}\n\n${guidance}\n`;
     }).join('\n');
-    download('design-resource-shortlist.md', text);
-    $('resource-count').textContent = `Exported ${selected.length} saved resource${selected.length === 1 ? '' : 's'}.`;
+    download('design-resource-shortlist.md',text);
   });
   $('library-controls').hidden = false;
-  updateFavorites(); filterLibrary();
-  const options = $('library-options');
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && options.open) { options.open = false; options.querySelector('summary').focus(); }
-  });
-  document.addEventListener('click', (event) => {
-    if (options.open && !options.contains(event.target)) options.open = false;
-  });
+  updateFavorites(); syncLibraryRoute(); filterLibrary();
+  if ('IntersectionObserver' in window) {
+    const sectionObserver = new IntersectionObserver((entries) => {
+      const visible = entries.find((entry) => entry.isIntersecting);
+      if (visible) markSection(visible.target.id);
+    }, {rootMargin:'-180px 0px -55% 0px',threshold:0});
+    ['library','tools','team-kit','ai-workflows','practices'].forEach((id) => sectionObserver.observe($(id)));
+  }
 
   // Native tab semantics and keyboard navigation.
   const tabs = [...document.querySelectorAll('.bench-tab')];

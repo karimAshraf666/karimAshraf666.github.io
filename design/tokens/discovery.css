@@ -1,0 +1,21 @@
+/* Discovery extension. Existing identity roles originate in redesign.css. */
+:root {
+  --wb-accent: var(--accent); --wb-ink: var(--ink); --wb-muted: var(--muted);
+  --wb-paper: var(--paper); --wb-surface: var(--white); --wb-tint: #eaf0ff;
+  --wb-border: #dce2ec; --wb-accent-hover: #103bb2;
+  --wb-s1: 4px; --wb-s2: 8px; --wb-s3: 12px; --wb-s4: 16px;
+  --wb-s5: 20px; --wb-s6: 24px; --wb-s8: 32px; --wb-s10: 40px;
+  --wb-s12: 48px; --wb-s14: 56px; --wb-s16: 64px;
+  --wb-type-xs: 12px; --wb-type-sm: 13px; --wb-type-base: 15px;
+  --wb-type-lead: 17px; --wb-type-card: 23px; --wb-type-section: 34px;
+  --wb-type-hero: 56px; --wb-type-hero-mobile: 39px;
+  --wb-radius: 12px; --wb-radius-card: 18px; --wb-pill: 999px;
+  --wb-line: 1px; --wb-focus: 2px; --wb-target: 44px;
+  --wb-page: min(1320px, calc(100% - 64px)); --wb-sidebar: 224px;
+  --wb-header-offset: 132px; --wb-sidebar-top: 112px;
+  --wb-mobile-top: 88px; --wb-mobile-scroll: 166px;
+  --wb-search-width: 205px; --wb-small-mark: 14px;
+  --wb-line-height: 1.65; --wb-heading-line-height: 1.1;
+  --wb-measure: 65ch; --wb-weight: 650; --wb-bold: 750;
+  --wb-fast: 160ms; --wb-z-navigation: 9;
+}

@@ -42,7 +42,7 @@ document.querySelectorAll('[data-year]').forEach((node) => {
 // Motion follows the reading order and is entirely optional.
 (() => {
   const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const targets = [...document.querySelectorAll('[data-reveal], .case-content > h2, .case-content > .media-grid, .writing-hero-inner, .bench-intro')];
+  const targets = [...document.querySelectorAll('[data-reveal], .case-content > h2, .case-content > .media-grid, .writing-hero-inner')];
   let observer;
   const revealAll = () => {
     document.body.classList.remove('motion-ready');

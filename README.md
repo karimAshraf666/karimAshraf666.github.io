@@ -23,6 +23,10 @@ Published at **https://karimashraf666.github.io** from `main` at the repository 
 - `redesign.css`: floating navigation, image-led layouts, typography, responsive styles and optional motion.
 - `script.js`: mobile navigation, section state, scroll reveals, reading progress and footer year.
 - `scripts/portfolio_shell.py`: shared navigation and library controls used when rebuilding the workbench.
+- `scripts/workbench_navigation.py`: directory layout and category navigation derived from the existing resource cards.
+- `design/`: discovery brief, component requirements, ruled-out approaches and shared tokens.
+- `discovery.css`: token-based navigation and directory styling.
+- `design-system.html`: generated visual reference for the discovery extension.
 - `docs/EVIDENCE-INVENTORY.md`: source of truth for claims and public-safety decisions.
 - `docs/PORTFOLIO-REVIEW-V8.md`: recruiter, copy, positioning, and journey standard.
 - `docs/PORTFOLIO-REVIEW-V9.md`: October Playful refresh, copy changes and responsive verification.
@@ -35,6 +39,23 @@ python -m http.server 4173
 ```
 
 Then open `http://localhost:4173`.
+
+## Rebuild the directory and preview assets
+
+Resource data lives in `scripts/build_workbench.py`. Keep resource IDs stable to preserve Saved lists. Edit published skill sources in `resources/workbench/skills/`.
+
+```text
+python scripts/build_workbench.py
+python scripts/optimize_portfolio.py
+python scripts/build_design_reference.py
+python scripts/verify_portfolio.py
+node --check workbench.js
+node --check script.js
+```
+
+The image optimization script requires Pillow. Original approved screens remain intact; homepage previews live in `assets/previews/`. Rebuilding ZIPs can change archive timestamps without changing their contents. Review staged files before publishing and keep unrelated resume drafts separate.
+
+The directory uses native hash links, progressively enhanced search and browser-local Saved resources. Mobile browsing is a disclosure; desktop categories remain visible. `design/components/` defines the behaviors and `design/tokens/discovery.css` defines new visual values. Run the design reference generator after editing either source.
 
 ## Evidence rules
 

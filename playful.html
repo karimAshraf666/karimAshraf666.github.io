@@ -17,16 +17,20 @@
   <meta name="theme-color" content="#20114d" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23f4f1ea'/><text x='31' y='45' font-family='Georgia,serif' font-size='40' font-weight='600' text-anchor='middle' fill='%2315201c'>K</text><circle cx='52' cy='16' r='5' fill='%23a43d31'/></svg>" />
   <link rel="stylesheet" href="styles.css?v=20261006" />
-  <link rel="stylesheet" href="redesign.css?v=20261012b" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;450;500;550;600;650;700;750;800&amp;display=swap" />
+<link rel="stylesheet" href="redesign.css?v=20261015c" />
+<link rel="stylesheet" href="design/tokens/discovery.css?v=20261015c" />
+<link rel="stylesheet" href="discovery.css?v=20261015c" />
 </head>
 <body class="case-page playful-case" data-theme="playful" id="top">
   <a class="skip-link" href="#case-summary">Skip to case study</a>
   <header class="site-header"><div class="header-inner">
       <a class="brand" href="index.html" aria-label="Karim Ashraf portfolio home"><span class="brand-mark" aria-hidden="true">K</span>Karim Ashraf</a>
+      <a class="mobile-workbench-link" href="workbench.html"><svg class="nav-workbench-mark" aria-hidden="true" viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M1 1h5v5H1zM9 1h5v5H9zM1 9h5v5H1zM9 9h5v5H9z"/></svg>Workbench</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav id="site-nav" aria-label="Primary navigation">
-        <a href="index.html#work" aria-current="page">Work</a><a href="index.html#about">About</a><a href="workbench.html">Workbench</a><a href="index.html#contact">Contact</a><a class="nav-resume" href="Karim_Ashraf_Product_Designer_Resume_2026.pdf" target="_blank" rel="noopener noreferrer">Résumé ↗</a>
-      </nav>
+      <nav id="site-nav" aria-label="Primary navigation"><a href="index.html#work" aria-current="page">Work</a><a href="index.html#about">About</a><a class="nav-workbench" href="workbench.html"><svg class="nav-workbench-mark" aria-hidden="true" viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M1 1h5v5H1zM9 1h5v5H9zM1 9h5v5H1zM9 9h5v5H9z"/></svg>Workbench</a><a href="index.html#contact">Contact</a><a class="nav-resume" href="Karim_Ashraf_Product_Designer_Resume_2026.pdf" target="_blank" rel="noopener noreferrer">Résumé ↗</a></nav>
     </div></header>
   <main>
     <section class="case-hero"><div class="case-hero-inner">
@@ -34,7 +38,7 @@
         <h1>From a product idea<br /><em>to working software.</em></h1>
         <p class="hero-deck">Playful is where I take a product beyond the design file. I shape the experience, direct AI-assisted development, review the working software and build the tools needed to run it.</p>
       </div>
-      <figure class="case-hero-media screen"><img src="assets/playful/home-october-2026.jpg" alt="Playful's illustrated homepage with search and entry points for Party, Discover, Store and Outdoors" width="1440" height="1000" /></figure>
+      <figure class="case-hero-media screen"><img decoding="async" src="assets/playful/home-october-2026.jpg" alt="Playful's illustrated homepage with search and entry points for Party, Discover, Store and Outdoors" width="1440" height="1000" /></figure>
     </div></section>
     <section class="case-facts" aria-label="Project facts"><dl class="facts-inner">
       <div class="fact"><dt>My role</dt><dd>Founder, product manager &amp; product designer</dd></div>
@@ -59,7 +63,7 @@
         <h2>One shared screen. Everyone's phone. Different ways to play.</h2>
         <p>Party puts hosting and joining next to each other. Game cards show the player range, time and premise before someone opens a room. The current lineup includes word association, memory, social dilemmas, a rescue relay and stealth games, with past experiments kept separate.</p>
         <p class="media-hint">Select any project screen to inspect it at full size.</p>
-        <div class="media-grid"><figure class="media-card wide"><img src="assets/playful/party-october-2026.jpg" alt="Party's join-code form, host action and illustrated featured game cards" width="1440" height="1000" loading="lazy" /><figcaption><strong>Choose with the room in mind.</strong> Player count and duration help a host pick a game that fits the people already there.</figcaption></figure></div>
+        <div class="media-grid"><figure class="media-card wide"><img decoding="async" src="assets/playful/party-october-2026.jpg" alt="Party's join-code form, host action and illustrated featured game cards" width="1440" height="1000" loading="lazy" /><figcaption><strong>Choose with the room in mind.</strong> Player count and duration help a host pick a game that fits the people already there.</figcaption></figure></div>
         <div class="decision-grid">
           <article class="decision-card"><span>Experience decision</span><h3>The television is a stage, not a form.</h3><p>The display carries progress and reveals. Phones carry private answers and controls. Joining by code avoids turning a casual game night into an account-setup task.</p></article>
           <article class="decision-card"><span>Technical decision</span><h3>Rules live on the server, not in each player's browser.</h3><p>Room identity, game state, permissions and separate host/player views support different formats. Reconnection and recovery matter as much as the first successful join.</p></article>
@@ -71,8 +75,8 @@
         <h2>A workshop should leave the room with something useful.</h2>
         <p>Party for Teams extends the room system into four working formats: Warm Start, Idea Rally, Team Reset and Room Vote. Each is organized around a job and a takeaway, rather than a list of workshop features.</p>
         <div class="media-grid">
-          <figure class="media-card wide"><img src="assets/playful/teams-october-2026.jpg" alt="Party for Teams introducing four beta formats and an optional single-browser preview" width="1440" height="1000" loading="lazy" /><figcaption><strong>Begin, create, improve or decide.</strong> The format choice names what the room needs to accomplish.</figcaption></figure>
-          <figure class="media-card wide"><img src="assets/playful/team-result-october-2026.jpg" alt="An example experiment card with a test, owner and review date, plus copy and download actions" width="1440" height="1400" loading="lazy" /><figcaption><strong>The output is part of the journey.</strong> An example card shows the decision, assumption, first test, owner and check-in date. It can be copied, downloaded or printed.</figcaption></figure>
+          <figure class="media-card wide"><img decoding="async" src="assets/playful/teams-october-2026.jpg" alt="Party for Teams introducing four beta formats and an optional single-browser preview" width="1440" height="1000" loading="lazy" /><figcaption><strong>Begin, create, improve or decide.</strong> The format choice names what the room needs to accomplish.</figcaption></figure>
+          <figure class="media-card wide"><img decoding="async" src="assets/playful/team-result-october-2026.jpg" alt="An example experiment card with a test, owner and review date, plus copy and download actions" width="1440" height="1400" loading="lazy" /><figcaption><strong>The output is part of the journey.</strong> An example card shows the decision, assumption, first test, owner and check-in date. It can be copied, downloaded or printed.</figcaption></figure>
         </div>
         <div class="decision-grid">
           <article class="decision-card"><span>Participation</span><h3>Private input before the reveal.</h3><p>People contribute without performing for the room. Passing is allowed. The facilitator can pace the session but cannot inspect someone else's unfinished answer.</p></article>
@@ -87,9 +91,9 @@
         <h2>Turn a vague wish to go out into a place and a plan.</h2>
         <p>Outdoors connects Ventures, Solo and Paws. Ventures brings together Cairo places and events, while Solo starts from the hesitation behind going alone. Paws adds pet-care discovery with direct provider contact rather than a booking promise.</p>
         <div class="media-grid">
-          <figure class="media-card wide"><img src="assets/playful/outdoors-october-2026.jpg" alt="Curated Cairo listings alongside a real interactive city map" width="1440" height="1000" loading="lazy" /><figcaption><strong>Place and context, together.</strong> MapLibre connects the list to real geography using OpenFreeMap and OpenStreetMap data. Listings carry their source and check date.</figcaption></figure>
-          <figure class="media-card"><img src="assets/playful/solo-october-2026.jpg" alt="Solo activities with time, cost, quiet and location filters" width="1440" height="1000" loading="lazy" /><figcaption><strong>Design for the hesitation.</strong> Time, cost and advice about arriving alone make a first attempt feel more manageable.</figcaption></figure>
-          <figure class="media-card"><img src="assets/playful/paws-october-2026.jpg" alt="Paws pet-care discovery with service filters and location context" width="1440" height="1000" loading="lazy" /><figcaption><strong>Care needs evidence.</strong> Discovery stays distinct from booking, payment or a guarantee of service.</figcaption></figure>
+          <figure class="media-card wide"><img decoding="async" src="assets/playful/outdoors-october-2026.jpg" alt="Curated Cairo listings alongside a real interactive city map" width="1440" height="1000" loading="lazy" /><figcaption><strong>Place and context, together.</strong> MapLibre connects the list to real geography using OpenFreeMap and OpenStreetMap data. Listings carry their source and check date.</figcaption></figure>
+          <figure class="media-card"><img decoding="async" src="assets/playful/solo-october-2026.jpg" alt="Solo activities with time, cost, quiet and location filters" width="1440" height="1000" loading="lazy" /><figcaption><strong>Design for the hesitation.</strong> Time, cost and advice about arriving alone make a first attempt feel more manageable.</figcaption></figure>
+          <figure class="media-card"><img decoding="async" src="assets/playful/paws-october-2026.jpg" alt="Paws pet-care discovery with service filters and location context" width="1440" height="1000" loading="lazy" /><figcaption><strong>Care needs evidence.</strong> Discovery stays distinct from booking, payment or a guarantee of service.</figcaption></figure>
         </div>
         <p>I separate original suggestions from externally sourced listings, and illustrations from photographs. A recommendation can be warm and personal without pretending to be verified information about a venue.</p>
       </div>
@@ -98,9 +102,9 @@
       <p class="case-label">Find and keep</p><div class="case-content">
         <h2>A shared identity without forcing a shared template.</h2>
         <div class="media-grid">
-          <figure class="media-card"><img src="assets/playful/store-october-2026.jpg" alt="The Store's clothing editions and illustrated collection categories" width="1440" height="1000" loading="lazy" /><figcaption><strong>Store.</strong> The current catalogue has 260 pieces across home, bags, clothing, wall art and accessories. Browsing is open; checkout is not.</figcaption></figure>
-          <figure class="media-card"><img src="assets/playful/discover-october-2026.jpg" alt="Discover's search, mood filters, media types and explanation for its featured recommendation" width="1440" height="1000" loading="lazy" /><figcaption><strong>Discover.</strong> Mood-led recommendations explain why a title fits. Audio categories are experimental; streaming availability is not connected.</figcaption></figure>
-          <figure class="media-card wide"><img src="assets/playful/profile-october-2026.jpg" alt="The profile invitation explaining account benefits and offering continued guest exploration" width="1440" height="1000" loading="lazy" /><figcaption><strong>Profile.</strong> Explain the benefit before asking for an account. Guest browsing stays available.</figcaption></figure>
+          <figure class="media-card"><img decoding="async" src="assets/playful/store-october-2026.jpg" alt="The Store's clothing editions and illustrated collection categories" width="1440" height="1000" loading="lazy" /><figcaption><strong>Store.</strong> The current catalogue has 260 pieces across home, bags, clothing, wall art and accessories. Browsing is open; checkout is not.</figcaption></figure>
+          <figure class="media-card"><img decoding="async" src="assets/playful/discover-october-2026.jpg" alt="Discover's search, mood filters, media types and explanation for its featured recommendation" width="1440" height="1000" loading="lazy" /><figcaption><strong>Discover.</strong> Mood-led recommendations explain why a title fits. Audio categories are experimental; streaming availability is not connected.</figcaption></figure>
+          <figure class="media-card wide"><img decoding="async" src="assets/playful/profile-october-2026.jpg" alt="The profile invitation explaining account benefits and offering continued guest exploration" width="1440" height="1000" loading="lazy" /><figcaption><strong>Profile.</strong> Explain the benefit before asking for an account. Guest browsing stays available.</figcaption></figure>
         </div>
         <p>The profile brings together a character, nickname, private picks, optional artwork journeys and a separate ownership shelf. Its read model resolves identity from the signed-in session, not a user ID supplied by the browser.</p>
         <p>Shared search matches real catalogue records and routes people to the relevant product. It does not pretend a basic name-and-place search understands every mood. More specific discovery belongs inside the experience designed for it.</p>
@@ -138,6 +142,6 @@
     <section class="next-project"><div class="next-inner"><div><p class="eyebrow">More of my work</p><h2>The same attention to decisions, across very different products.</h2></div><a class="button" href="index.html#work">All case studies</a></div></section>
   </main>
   <footer class="site-footer"><div class="footer-inner"><a href="index.html">Portfolio home</a><span>© <span data-year></span></span></div></footer>
-  <script src="script.js?v=20261012b"></script>
+  <script src="script.js?v=20261015c"></script>
 </body>
 </html>
