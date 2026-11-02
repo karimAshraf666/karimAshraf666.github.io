@@ -20,6 +20,11 @@ Start from the user's outcome and the work already available. Keep the operating
 
 For an extension or connector, inspect source, execution, access and rollback using [extension-review.md](references/extension-review.md). A review does not itself authorize installation or new access.
 
+When the task uses T3 Code as the workspace for supported providers, read
+[T3 Code notes](references/t3-code.md). Keep the user's existing provider and model choices;
+using this workflow does not authorize moving active work, enabling remote access or adding
+accounts.
+
 ## Portable use
 
 In a client that supports skills, install this folder with its references. In ordinary chat, attach this file and the relevant reference. These instructions do not grant access to files, install integrations, change settings or create recurring activity.

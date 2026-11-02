@@ -5,7 +5,7 @@ description: >
   page that doesn't look AI-made: interview, references, design system, asset system,
   anti-slop copy, build, screenshot verification, feedback round. Use for "build a website",
   "landing page", "redesign this site", "make this look premium", "this looks like a template",
-  "website for <client>", or any new marketing page. Hands off to scroll-craft for scroll-driven
+  "website for a client", or any new marketing page. Hands off to scroll-craft for scroll-driven
   experiences and to design-loop / design-dna for matching and codifying a look.
 ---
 
@@ -46,6 +46,11 @@ If the user explicitly says "use your judgment", write the brief yourself, mark 
 Gather 3-6 references (Refero MCP if connected, Savee, Mobbin, client competitors, the user's
 picks). Pick **one dominant direction**. Don't average references into a safe middle. Write
 a short decision ledger: what is taken from which reference, and why.
+
+When the identity itself needs a clearer idea or more usable variation, use
+`brand-art-direction` within this workflow. When a proposed feature or journey depends on
+competitor assumptions, conflicting feedback or market context, use `product-context-review`
+before committing to it. A routine page edit does not need either review.
 
 ## 3. The design system page (ship it with the site)
 
@@ -105,6 +110,9 @@ Render it. Screenshot desktop (1440) and mobile (390) at every section and sever
 positions. Check: dead scroll (nothing changes), low-contrast text, overflow, broken links,
 console errors, reduced-motion state, load weight. Run the **design-loop** critics if the
 work is client-facing. Fix, re-shoot, then present.
+
+If this session cannot render or capture screenshots, request screenshots before calling
+the design final. State any checks that remain unverified.
 
 ## 8. Present and take feedback
 

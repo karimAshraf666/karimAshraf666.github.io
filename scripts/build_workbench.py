@@ -59,7 +59,7 @@ resources = [
  ('aifilm-video','AI film workflow with Claude skills','Articles & guidance','commerce ai shared','Joey on building the world before the shots: story bible, locked characters, scene plates, then shot prompts, with a low-resolution draft pass.','Use when AI-generated characters or scenes drift between generations, or credits run out on retries.','Draft one scene at 480p, review framing and dialogue, then render only the approved prompt at full resolution.','Public video (22 min); sponsored by Higgsfield','https://www.youtube.com/watch?v=LOUEH3DzLro'),
  ('elevenlabs','ElevenLabs','Tools','commerce ai shared','Voice generation with multiple takes, word timings and an API for narration and captions.','Use when a promo needs voiceover that captions and cuts can follow.','Generate four takes of one script and pick the best by listening, not by prompt.','Free tier; paid plans and API','https://elevenlabs.io/'),
  ('moises','Moises','Tools','commerce ai shared','Audio separation that isolates or removes music, voice and instruments from a track.','Use to remove unwanted background music from generated video audio before editing.','Separate one clip and check the dialogue stays clear after the music is removed.','Free tier; paid plans','https://moises.ai/'),
- ('skill-motion-graphics','Motion graphics skill','AI skills','commerce saas ai shared','Coded motion promos: references, a motion design system, approved stills, then a frame-exact HTML build rendered with Playwright and ffmpeg.','Use for product promos, launch films, UI motion and kinetic type built with an AI agent.','Render six stills, approve them, then the video, and keep a changelog of each review round.','Free SKILL.md; needs Node, Playwright and ffmpeg','https://karimashraf666.github.io/resources/workbench/skills/motion-graphics/SKILL.md'),
+ ('skill-motion-graphics','Motion graphics skill','AI skills','commerce saas ai shared','Coded motion promos with references, a motion design system, approved stills and a checked rendering pipeline. Includes HTML/canvas, Remotion and HyperFrames guidance.','Use for product promos, launch films, UI motion and kinetic type built with an AI agent.','Record the renderer and export settings, approve representative stills, then inspect a moving range before the full export.','Free skill and renderer notes; dependencies and licenses depend on the selected route','https://karimashraf666.github.io/resources/workbench/skills/motion-graphics/SKILL.md'),
  ('skill-ai-film','AI film pipeline skill','AI skills','commerce ai shared','Runs an AI-generated film or ad in order: world bible, characters, scene plates, shot prompts, draft pass, final render and a credit log.','Use for AI-generated ads, skits, music videos or character series.','Keep a production log of model, resolution and credits for every shot.','Free SKILL.md; generation tools are paid','https://karimashraf666.github.io/resources/workbench/skills/ai-film-pipeline/SKILL.md'),
  ('skill-film-joey','AI film skills by Joey','AI skills','commerce ai shared','Five free skills: Story Bible Builder, Castkit characters, Scenecraft plates, Shotcaller for Seedance and Motiondojo for motion transfer.','Use with the AI film pipeline when building characters, scenes and shot prompts for video models.','Lock one character face before building outfits or a character sheet.','Free from the author on Higgsfield','https://higgsfield.ai/@joeysnoisygroup/blogs/all-my-claude-skills-for-better-prompting'),
 ]
@@ -82,6 +82,26 @@ resources[first_skill:first_skill] = claude_skills
 resources.extend(claude_references)
 claude_resource_ids = {r[0] for r in [*claude_skills, *claude_references]}
 claude_skill_folders = dict(zip([r[0] for r in claude_skills], ['claude-workflow','agent-task-brief','agent-context-handoff','agent-extension-review']))
+
+# Five source videos and their reusable adaptations, reviewed November 2, 2026.
+video_integration_resources = [
+ ('coded-motion-video','Rendering and iterating coded motion','Articles & guidance','commerce saas ai shared','Tyler Mommsen on choosing a renderer, writing a motion brief and revising specific details.','Use when a coded promo needs an explicit export method or a more useful creative brief. Framework APIs and licensing need their own checks.','Write the renderer, dimensions, timing and inspection checks for one scene; mark which assets and creative decisions are already approved.','Public video; named tools and generation services have separate requirements','https://www.youtube.com/watch?v=2moKxAZjwCE'),
+ ('product-context-video','Product decisions across markets','Articles & guidance','banking saas commerce ai shared','A Hatch talk about adapting product decisions to local workflows and reading beyond feedback labels or blended metrics.','Use when a competitor approach or pooled feedback may hide important context differences. Treat the talk\'s company stories as examples.','Read the raw feedback for one decision, compare relevant groups on compatible measures, and record what would change the recommendation.','Public talk; examples do not establish national traits or legal requirements','https://www.youtube.com/watch?v=NBeXbCG5IbQ'),
+ ('notion-craft-video','How Notion designs products quickly','Articles & guidance','saas ai shared','Randy J. Hunt on craft, ownership and shorter cycles of learning and delivery at Notion.','Use when choosing between a quick learning test and a committed product improvement. A realistic prototype still needs a clear status.','Choose one small action, label it as learning or delivery, and define the evidence or release checks it needs.','Public Hatch talk; Notion\'s internal setup is an example, not a tool requirement','https://www.youtube.com/watch?v=8odhmX32w2M'),
+ ('brand-direction-video','Paula Scher on identity systems','Articles & guidance','commerce saas ai shared','Paula Scher demonstrates typography in context, usable identity variations and an authored illustration vocabulary.','Use when a brand idea needs to work across formats or be extended by another maker. Keep the client\'s own identity above the examples.','Show one identity with short and long content, name what stays fixed, and demonstrate where permitted variation breaks down.','Public Hatch talk; client marks and typefaces remain with their owners','https://www.youtube.com/watch?v=UsXYxezOUMU'),
+ ('t3-code-video','T3 Code walkthrough','Articles & guidance','saas ai shared','Theo introduces T3 Code through provider connections, project threads and remote workflows.','Use to understand the workflow before a bounded pilot. Check current capabilities and setup against the official repository.','Compare one demonstrated workflow with your current setup; list the provider access and machine it would require.','Public video; bring compatible provider access and your own compute','https://www.youtube.com/watch?v=uLGxb4F3SyI'),
+ ('t3-code','T3 Code','Tools','saas ai shared','An open-source interface for running supported coding agents on your own machine, with desktop, web and mobile clients.','Use when one interface would help manage existing coding-agent workflows. Confirm the supported provider, authentication and project permissions first.','Pilot one authorized local task, inspect its changes and record the app/provider versions. Add remote access only when the task requires it.','MIT-licensed app; authenticated provider access and compute are separate; provider usage limits apply','https://github.com/pingdotgg/t3code'),
+ ('skill-brand-art-direction','Brand art direction skill','AI skills','commerce saas ai shared','Develop an identity idea through typography, scale and a graphic vocabulary, then demonstrate how another maker can extend it.','Use for a new identity direction, generic branding or inconsistent extensions. Existing client systems take precedence.','Test a direction on contrasting formats, show a failure boundary, and codify the approved winner with Design DNA.','Free skill with timestamped source notes; no font or image generation is required','https://karimashraf666.github.io/resources/workbench/skills/brand-art-direction/SKILL.md'),
+ ('skill-product-context','Product context review skill','AI skills','banking saas commerce ai shared','Review a feature or flow against its users\' context, inspect conflicting feedback and choose a useful next test or improvement.','Use when adapting a competitor approach, serving different markets or deciding what to do under uncertainty. Skip routine implementation and translation-only edits.','Review one decision using its raw evidence, then separate a learning artifact from a committed change and define the relevant checks.','Free skill with timestamped source notes; use the project\'s existing tools','https://karimashraf666.github.io/resources/workbench/skills/product-context-review/SKILL.md'),
+]
+resources.extend(video_integration_resources)
+video_integration_ids = {r[0] for r in video_integration_resources} | {'skill-motion-graphics'}
+packaged_skill_folders = {
+    **claude_skill_folders,
+    'skill-motion-graphics': 'motion-graphics',
+    'skill-brand-art-direction': 'brand-art-direction',
+    'skill-product-context': 'product-context-review',
+}
 
 prompts = [
  ('states', 'Expand an interaction-state specification', 'Turn a bounded brief into a reviewable matrix of states and recovery paths.', '''Act as a product design partner. Use the supplied brief and existing component rules.
@@ -239,8 +259,8 @@ for name, text in templates.items():
     (KIT / name).write_text(text, encoding='utf-8')
 
 packages = build_resource_packages(KIT, resources)
-catalog = [dict(zip(['id','name','type','industries','purpose','when','practice','access','url'], r)) | packages[i] | ({'checked':'2026-10-15'} if r[0] in claude_resource_ids else {}) for i,r in enumerate(resources)]
-(KIT / 'resource-catalog.json').write_text(json.dumps({'checked':'2026-10-12','catalogUpdated':'2026-10-15','resources':catalog}, indent=2, ensure_ascii=False), encoding='utf-8')
+catalog = [dict(zip(['id','name','type','industries','purpose','when','practice','access','url'], r)) | packages[i] | ({'checked':'2026-11-02'} if r[0] in video_integration_ids else {'checked':'2026-10-15'} if r[0] in claude_resource_ids else {}) for i,r in enumerate(resources)]
+(KIT / 'resource-catalog.json').write_text(json.dumps({'checked':'2026-10-12','catalogUpdated':'2026-11-02','resources':catalog}, indent=2, ensure_ascii=False), encoding='utf-8')
 with (KIT / 'resource-catalog.csv').open('w', newline='', encoding='utf-8-sig') as f:
     writer = csv.writer(f)
     writer.writerow(['Resource','Type','Industries','Purpose','When to use','Team practice','Access','Source URL','Human worksheet','CSV template','AI agent guide'])
@@ -262,7 +282,7 @@ with zipfile.ZipFile(KIT / 'design-ai-skills.zip', 'w', zipfile.ZIP_DEFLATED) as
 # Complete per-skill packages keep supporting files beside the entrypoint.
 downloads = KIT / 'skill-downloads'
 downloads.mkdir(exist_ok=True)
-for folder in claude_skill_folders.values():
+for folder in packaged_skill_folders.values():
     with zipfile.ZipFile(downloads / f'{folder}.zip', 'w', zipfile.ZIP_DEFLATED) as z:
         for path in sorted((KIT / 'skills' / folder).rglob('*')):
             if path.is_file(): z.write(path, path.relative_to(KIT / 'skills').as_posix())
@@ -274,9 +294,10 @@ cards = '\n'.join(f'''<article class="bench-card bench-resource" data-resource="
  <details><summary>When to use &amp; team practice</summary><p>{esc(r[5])}</p><p><strong>Try with the team:</strong> {esc(r[6])}</p></details>
  <p class="bench-rule">{esc(r[7])}</p><div class="bench-resource-files"><a href="resources/workbench/resource-guides/{r[0]}-worksheet.html">Use team worksheet →<span class="visually-hidden">: {esc(r[1])}</span></a><a href="resources/workbench/resource-guides/{r[0]}-agent.md" download>Companion AI guide · MD ↓<span class="visually-hidden">: {esc(r[1])}</span></a></div>
 </article>''' for r in resources)
-for resource in claude_skills:
+for resource in resources:
     rid,title = resource[:2]
-    folder = claude_skill_folders[rid]
+    if rid not in packaged_skill_folders: continue
+    folder = packaged_skill_folders[rid]
     save_button = f'<button class="bench-favorite" type="button" aria-pressed="false" aria-label="Save {esc(title)}"'
     package_link = f'<a href="resources/workbench/skill-downloads/{folder}.zip" download>Skill ZIP ↓<span class="visually-hidden">: {esc(title)}</span></a>'
     cards = cards.replace(save_button, package_link + save_button)
@@ -292,7 +313,7 @@ template_links = [
  ('industry-pattern-review.md','Industry pattern review','Adapt a reference to your users, platform and constraints.','MD'),
  ('ai-context-pack.md','AI context pack','Give an assistant component rules, evidence and acceptance criteria.','MD'),
  ('team-pilot.md','One-week team pilot','Try one improvement with partners before broader adoption.','MD'),
- ('design-ai-skills.zip','AI design skills',f'{len(list((KIT / "skills").glob("*/SKILL.md")))} reusable skills for design, motion, Claude workflows, task briefs, handoffs and extension reviews.','ZIP'),
+ ('design-ai-skills.zip','AI design skills',f'{len(list((KIT / "skills").glob("*/SKILL.md")))} reusable skills for product decisions, identity, websites, motion and agent workflows.','ZIP'),
 ]
 links = '\n'.join(f'<a class="bench-template" href="resources/workbench/{name}" download><span><strong>{title}</strong><small>{desc}</small></span><span>{kind} ↓</span></a>' for name,title,desc,kind in template_links)
 

@@ -1,0 +1,13 @@
+﻿Section,Prompt,Response,Evidence,Owner,Next action
+Reference,"An open-source interface for running supported coding agents on your own machine, with desktop, web and mobile clients.",https://github.com/pingdotgg/t3code,,,
+Team exercise,"Pilot one authorized local task, inspect its changes and record the app/provider versions. Add remote access only when the task requires it.",,,,
+Review title,Name the bounded task.,,,,
+Owner and partners,"Who will do the work, review it and maintain the outcome?",,,,
+Versions and source,"Record the T3 Code release, provider version and official setup documentation used.",,,,
+Provider readiness,Which supported provider is installed and authenticated on the machine that will run the agents?,,,,
+Task and project boundary,"Name one authorized task, its project folder and unrelated work to preserve.",,,,
+Permissions and execution,Review the selected permission mode and where commands and files will be handled. Keep existing project rules.,,,,
+Pilot verification,Inspect the actual output and changes. Record the checks run and any unverified behavior.,,,,
+Usage and compute,"Record observed usage where available. Provider quotas, paid access and machine costs are separate from the app license.",,,,
+Remote access and maintenance,Add remote access only when required and authorized. Name the update owner and confirm a way to return to the existing workflow.,,,,
+Decision and next action,"What is agreed, what remains open, who owns it and when will it be reviewed?",,,,

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Context Review"
+  short_description: "Check product choices against user context"
+  default_prompt: "Use $product-context-review to review this product decision against the available user evidence and operating context."

@@ -61,5 +61,13 @@ Reusable guides for bounded product design tasks. Read a relevant resource guide
 - **Claude Code working practices** (Articles & guidance; shared saas commerce banking ai): [Agent guide](resource-guides/claude-practices-agent.md) · [Human worksheet](resource-guides/claude-practices-worksheet.html)
 - **Claude usage and context costs** (Articles & guidance; shared saas commerce banking ai): [Agent guide](resource-guides/claude-usage-agent.md) · [Human worksheet](resource-guides/claude-usage-worksheet.html)
 - **MCP connector setup and trust** (Articles & guidance; shared saas commerce banking ai): [Agent guide](resource-guides/claude-mcp-agent.md) · [Human worksheet](resource-guides/claude-mcp-worksheet.html)
+- **Rendering and iterating coded motion** (Articles & guidance; commerce saas ai shared): [Agent guide](resource-guides/coded-motion-video-agent.md) · [Human worksheet](resource-guides/coded-motion-video-worksheet.html)
+- **Product decisions across markets** (Articles & guidance; banking saas commerce ai shared): [Agent guide](resource-guides/product-context-video-agent.md) · [Human worksheet](resource-guides/product-context-video-worksheet.html)
+- **How Notion designs products quickly** (Articles & guidance; saas ai shared): [Agent guide](resource-guides/notion-craft-video-agent.md) · [Human worksheet](resource-guides/notion-craft-video-worksheet.html)
+- **Paula Scher on identity systems** (Articles & guidance; commerce saas ai shared): [Agent guide](resource-guides/brand-direction-video-agent.md) · [Human worksheet](resource-guides/brand-direction-video-worksheet.html)
+- **T3 Code walkthrough** (Articles & guidance; saas ai shared): [Agent guide](resource-guides/t3-code-video-agent.md) · [Human worksheet](resource-guides/t3-code-video-worksheet.html)
+- **T3 Code** (Tools; saas ai shared): [Agent guide](resource-guides/t3-code-agent.md) · [Human worksheet](resource-guides/t3-code-worksheet.html)
+- **Brand art direction skill** (AI skills; commerce saas ai shared): [Agent guide](resource-guides/skill-brand-art-direction-agent.md) · [Human worksheet](resource-guides/skill-brand-art-direction-worksheet.html)
+- **Product context review skill** (AI skills; banking saas commerce ai shared): [Agent guide](resource-guides/skill-product-context-agent.md) · [Human worksheet](resource-guides/skill-product-context-worksheet.html)
 
 Use supplied evidence and existing team rules. Mark uncertainty. Never claim a resource was adopted, a tool installed or an interaction tested without corresponding evidence.

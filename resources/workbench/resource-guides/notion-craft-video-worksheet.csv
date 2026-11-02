@@ -1,0 +1,13 @@
+﻿Section,Prompt,Response,Evidence,Owner,Next action
+Reference,"Randy J. Hunt on craft, ownership and shorter cycles of learning and delivery at Notion.",https://www.youtube.com/watch?v=8odhmX32w2M,,,
+Team exercise,"Choose one small action, label it as learning or delivery, and define the evidence or release checks it needs.",,,,
+Review title,Name the bounded task.,,,,
+Owner and partners,"Who will do the work, review it and maintain the outcome?",,,,
+User outcome,What specific improvement or uncertainty should this cycle address?,,,,
+Learning or delivery,Is the next artifact a test of an uncertain direction or a committed improvement? Label its status.,,,,
+Small coherent action,Choose a useful step that can be reviewed without bundling independent changes.,,,,
+Approved context,"Which existing requirements, components and research should the artifact use?",,,,
+Prototype limits,"If this is a test, identify mocked data, missing integrations and untested behavior.",,,,
+Verification and ownership,"Who will inspect the result, using which learning observation or engineering and release checks?",,,,
+Follow-up,"Record what happened, what changed and what remains open. Consider review effort and reversibility.",,,,
+Decision and next action,"What is agreed, what remains open, who owns it and when will it be reviewed?",,,,

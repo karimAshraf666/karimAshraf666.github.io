@@ -57,7 +57,7 @@ The image optimization script requires Pillow. Original approved screens remain 
 
 The directory uses native hash links, progressively enhanced search and browser-local Saved resources. Mobile browsing is a disclosure; desktop categories remain visible. `design/components/` defines the behaviors and `design/tokens/discovery.css` defines new visual values. Run the design reference generator after editing either source.
 
-Claude workflow, task brief, context handoff and extension review have complete individual ZIPs in `resources/workbench/skill-downloads/`, generated from their canonical folders in `resources/workbench/skills/`. Keep supporting files with SKILL.md. Their task-specific team worksheets come from `RESOURCE_FIELDS` in `scripts/workbench_resource_packages.py`. Installation and client-coverage notes are included in the skills bundle README.
+Claude workflow, task brief, context handoff, extension review, motion graphics, brand art direction and product context review have complete individual ZIPs in `resources/workbench/skill-downloads/`, generated from their canonical folders in `resources/workbench/skills/`. Keep supporting files with SKILL.md. Task-specific team worksheets and related source links come from `RESOURCE_FIELDS` and `RESOURCE_LINKS` in `scripts/workbench_resource_packages.py`. Installation and client-coverage notes are included in the skills bundle README.
 
 ## Evidence rules
 

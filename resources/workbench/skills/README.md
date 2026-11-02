@@ -9,3 +9,7 @@ Claude web and Cowork use skills enabled for the account; copying into a local f
 The Claude workflow, task brief, context handoff and extension review are original adaptations by Karim Ashraf, informed by Jay E / RoboNuggets' tutorial and official documentation. They are not copies of the creator's proprietary skills or companion PDF. Source links and review dates are in the files.
 
 No API key, model router, recurring task or permission change is required to use these four workflows. Relevant commands and product behavior depend on the client and version; inspect current documentation before changing configuration.
+
+Brand art direction and product context review are Karim's adaptations of the linked talks. Their source notes separate speaker examples from reusable guidance. The motion graphics skill includes renderer and iteration notes with links to official framework documentation. Copy each complete folder, including references; a SKILL.md file alone can leave required context behind.
+
+Brand art direction helps develop and test an identity before an approved look is codified with Design DNA. Product context review helps choose a useful next action from the available evidence. Both preserve the current project's decisions and tools. A motion brief can use the motion skill without starting video production or installing a renderer.

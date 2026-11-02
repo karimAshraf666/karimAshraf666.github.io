@@ -1,0 +1,13 @@
+﻿Section,Prompt,Response,Evidence,Owner,Next action
+Reference,"Review a feature or flow against its users' context, inspect conflicting feedback and choose a useful next test or improvement.",https://karimashraf666.github.io/resources/workbench/skills/product-context-review/SKILL.md,,,
+Team exercise,"Review one decision using its raw evidence, then separate a learning artifact from a committed change and define the relevant checks.",,,,
+Review title,Name the bounded task.,,,,
+Owner and partners,"Who will do the work, review it and maintain the outcome?",,,,
+Decision and outcome,"What is being chosen, for whom, and what observable user outcome should improve?",,,,
+Evidence and assumptions,"Link the current brief, raw feedback, reference assumptions and missing evidence.",,,,
+Context fit,"Which relevant user, workflow or market differences change the suitability of the reference?",,,,
+Feedback and measures,"Inspect comments and compare cohorts using compatible definitions, time windows and samples.",,,,
+Recommended action,"Choose a useful change, prototype or evidence check. What observation would change the recommendation?",,,,
+Learning or delivery,Label the artifact and its material limits. Keep production review and release requirements for committed work.,,,,
+Confirmed requirements,Put confirmed decisions into the existing brief or spec when a handoff or implementation needs it.,,,,
+Decision and next action,"What is agreed, what remains open, who owns it and when will it be reviewed?",,,,
