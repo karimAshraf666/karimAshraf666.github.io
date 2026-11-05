@@ -77,6 +77,8 @@ material. [17:54-20:30]
 
 ## Review and handoff
 
+For coordinated logo, typography and palette production, read [references/identity-production.md](references/identity-production.md) for scope, real-language checks, contrast evidence and handoff.
+
 Render the direction at its intended sizes; use `design-loop` for visual comparison and
 independent critique. Judge the pixels: recognisability across examples, hierarchy at a
 glance, legibility, and whether allowed variation remains coherent. If only a written

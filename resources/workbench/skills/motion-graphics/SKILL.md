@@ -154,6 +154,8 @@ references, not the tutorial's fictional app. Prompt-only requests end with the 
 
 ## Deliverables
 
+For explicitly requested animated component anatomy/dimension sheets, read [references/dimensional-spec-motion.md](references/dimensional-spec-motion.md) and begin with ui-dimensional-spec measurements.
+
 `REFERENCES.md` (links, creators, prompt/stack sources, why chosen/rejected) · `MOTION.md` ·
 beat map · approved stills · editable renderer source (`video.html` for the HTML route) ·
 final MP4 or agreed format · `CHANGELOG.md` of review rounds. Scale these to the deliverable;

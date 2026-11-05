@@ -69,5 +69,11 @@ Reusable guides for bounded product design tasks. Read a relevant resource guide
 - **T3 Code** (Tools; saas ai shared): [Agent guide](resource-guides/t3-code-agent.md) · [Human worksheet](resource-guides/t3-code-worksheet.html)
 - **Brand art direction skill** (AI skills; commerce saas ai shared): [Agent guide](resource-guides/skill-brand-art-direction-agent.md) · [Human worksheet](resource-guides/skill-brand-art-direction-worksheet.html)
 - **Product context review skill** (AI skills; banking saas commerce ai shared): [Agent guide](resource-guides/skill-product-context-agent.md) · [Human worksheet](resource-guides/skill-product-context-worksheet.html)
+- **oil-ui: screenshot and task review** (Articles & guidance; saas commerce banking ai shared): [Agent guide](resource-guides/oil-ui-source-agent.md) · [Human worksheet](resource-guides/oil-ui-source-worksheet.html)
+- **Dimensional drawing: UI specifications** (Articles & guidance; saas commerce banking ai shared): [Agent guide](resource-guides/dimensional-drawing-source-agent.md) · [Human worksheet](resource-guides/dimensional-drawing-source-worksheet.html)
+- **Awwwards research and optional MCP** (Tools; commerce saas ai shared): [Agent guide](resource-guides/awwwards-mcp-source-agent.md) · [Human worksheet](resource-guides/awwwards-mcp-source-worksheet.html)
+- **design.how: extract, map and migrate** (Articles & guidance; saas banking commerce ai shared): [Agent guide](resource-guides/design-how-source-agent.md) · [Human worksheet](resource-guides/design-how-source-worksheet.html)
+- **Brand Identity Skill: coordinated production** (Articles & guidance; commerce saas ai shared): [Agent guide](resource-guides/brand-identity-source-agent.md) · [Human worksheet](resource-guides/brand-identity-source-worksheet.html)
+- **UI dimensional specification skill** (AI skills; saas banking commerce ai shared): [Agent guide](resource-guides/skill-ui-dimensional-spec-agent.md) · [Human worksheet](resource-guides/skill-ui-dimensional-spec-worksheet.html)
 
 Use supplied evidence and existing team rules. Mark uncertainty. Never claim a resource was adopted, a tool installed or an interaction tested without corresponding evidence.

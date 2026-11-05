@@ -78,6 +78,8 @@ Optional later: an MCP server or CLI exposing tokens/components; Storybook as th
 
 ## Workflow: audit an existing system ("why do agents keep drifting?")
 
+For extraction, semantic token mapping, source-backed docs or migration pilots, read [references/extract-map-migrate.md](references/extract-map-migrate.md).
+
 Report, with file:line evidence: raw values bypassing tokens; components/variants used
 in code but not documented (or vice versa); duplicated facts across docs/Figma/code;
 missing decision logs; missing `ruled-out`; components with no CRD; stale docs. Rank the fixes

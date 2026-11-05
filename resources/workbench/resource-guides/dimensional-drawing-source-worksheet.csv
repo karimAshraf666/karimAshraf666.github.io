@@ -1,0 +1,9 @@
+﻿Section,Prompt,Response,Evidence,Owner,Next action
+Reference,"A method for explaining component anatomy with dimension codes, source-linked values and responsive rules.",https://github.com/enesozturk/dimensional-drawing,,,
+Team exercise,Draw one component from its actual tokens and code; leave unavailable values marked TBD.,,,,
+Review title,Name the bounded task.,,,,
+Owner and partners,"Who will do the work, review it and maintain the outcome?",,,,
+Measurement provenance,"Name source revision, scale, viewport and declared versus observed values.",,,,
+Dimension codes,Connect every code to one table row; leave unknown source values TBD.,,,,
+Geometry check,Verify formulas and content-dependent HUG/FLEX/FILL rules.,,,,
+Decision and next action,"What is agreed, what remains open, who owns it and when will it be reviewed?",,,,

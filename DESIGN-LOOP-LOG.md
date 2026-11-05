@@ -47,3 +47,8 @@ Added four skills and four source references using the existing resource-card co
 The primary agent checked all four new skill names and package links in the rendered collection, expanded the collection from 12 to 15 skills, checked mobile overflow, and exported a filled task worksheet. Static verification now covers 68 pages, 617 local references and 59 resource packages. Complete per-skill ZIP contents are compared byte for byte with their source folders.
 
 The four skill entrypoints passed the skill-creator validator. A separate read-only forward test passed five scenarios covering a trivial edit, ambiguous work, context recovery, extension inspection and subscription-cost assumptions. No savings, successful third-party integration or runtime safety was inferred from those tests.
+
+
+## 2026-11-05: Workbench resource additions
+
+Content and download additions use existing resource cards and category navigation; no visual system changes. Sequential self-review checked copy clarity, source attribution and download completeness. Local Chromium captures at 1440px and 390px show dimensional-source and skill results without horizontal overflow. Search returns two matching cards and the skill ZIP link resolves locally; all six new resource IDs exist. No runtime exceptions observed. Existing screenshots/navigation are otherwise unchanged. These were self-review passes, not independent agent reviews.

@@ -1,0 +1,10 @@
+﻿Section,Prompt,Response,Evidence,Owner,Next action
+Reference,"UI review methods adapted into Design Loop, with visual quality and observed task completion recorded separately.",https://github.com/oil-oil/oil-ui,,,
+Team exercise,"Review one screen, then test one task and keep the two evidence records separate.",,,,
+Review title,Name the bounded task.,,,,
+Owner and partners,"Who will do the work, review it and maintain the outcome?",,,,
+Review mode,"Choose read-only review, polish, redesign or exploration.",,,,
+Visual evidence,"Record screenshot, viewport, state and concrete visual finding.",,,,
+Task evidence,"Record the goal, actions and actual resulting state; label untested steps.",,,,
+Next correction,"Name location, evidence, consequence and the smallest useful next check.",,,,
+Decision and next action,"What is agreed, what remains open, who owns it and when will it be reviewed?",,,,

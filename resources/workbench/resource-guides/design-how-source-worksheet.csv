@@ -1,0 +1,10 @@
+﻿Section,Prompt,Response,Evidence,Owner,Next action
+Reference,"Design-system methods adapted for semantic token mapping, source-backed documentation and one-component migration pilots.",https://github.com/arla6ka/design.how,,,
+Team exercise,Map one component and prove that equal numeric values with different roles stay distinct.,,,,
+Review title,Name the bounded task.,,,,
+Owner and partners,"Who will do the work, review it and maintain the outcome?",,,,
+Semantic mapping,Map property roles before comparing numbers; record aliases and modes.,,,,
+Classification,"Mark exact semantic matches, documented deviations, ambiguity and system gaps.",,,,
+Pilot call site,"Choose one component and its hardest real usage; check props, slots, events and data behavior.",,,,
+Baseline and debt,Match render conditions and list existing debt separately from new drift.,,,,
+Decision and next action,"What is agreed, what remains open, who owns it and when will it be reviewed?",,,,

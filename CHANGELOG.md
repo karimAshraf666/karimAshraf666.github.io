@@ -12,3 +12,11 @@
 - Highlighted Workbench in the global navigation and moved its homepage invitation after selected work.
 - Added lighter WebP homepage previews, intrinsic image dimensions and direct font stylesheet loading.
 - Documented the discovery components, tokens, generation and verification.
+
+
+## 2026-11-05: Design-source adaptations in Workbench
+
+- Added five repository sources with tailored worksheets, companion guides and inspected commit attribution.
+- Added UI dimensional specifications and complete downloads; extended review, design-system, CRD, identity and motion skills.
+- Added public Awwwards research guidance with optional connector boundaries. No server or upstream installer was configured.
+- Rebuilt 73 resources and 18 AI skill entries; verified pages, links, archives and desktop/mobile search/rendering.

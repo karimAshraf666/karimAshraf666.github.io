@@ -103,6 +103,84 @@ packaged_skill_folders = {
     'skill-product-context': 'product-context-review',
 }
 
+# Five design repositories and focused adaptations, reviewed November 5, 2026.
+design_source_resources = [
+  [
+    "oil-ui-source",
+    "oil-ui: screenshot and task review",
+    "Articles & guidance",
+    "saas commerce banking ai shared",
+    "UI review methods adapted into Design Loop, with visual quality and observed task completion recorded separately.",
+    "Use when reviewing screenshots, polishing an interface or checking a real user task.",
+    "Review one screen, then test one task and keep the two evidence records separate.",
+    "MIT repository; instruction adaptation reviewed 5 November 2026; upstream scripts not installed",
+    "https://github.com/oil-oil/oil-ui"
+  ],
+  [
+    "dimensional-drawing-source",
+    "Dimensional drawing: UI specifications",
+    "Articles & guidance",
+    "saas commerce banking ai shared",
+    "A method for explaining component anatomy with dimension codes, source-linked values and responsive rules.",
+    "Use when design and engineering need a measured component handoff.",
+    "Draw one component from its actual tokens and code; leave unavailable values marked TBD.",
+    "MIT repository; static and motion methods adapted; templates and renderers not installed",
+    "https://github.com/enesozturk/dimensional-drawing"
+  ],
+  [
+    "awwwards-mcp-source",
+    "Awwwards research and optional MCP",
+    "Tools",
+    "commerce saas ai shared",
+    "Website reference discovery with a public research recipe and a separate review of the optional connector.",
+    "Use when studying a visual or motion mechanism for an existing brief.",
+    "Inspect one live reference and record the observed mechanism, transfer rule and assets to leave out.",
+    "MIT repository; research recipe adopted; MCP server, CDP and automatic updates remain unconfigured",
+    "https://github.com/INSANE0777/Awwwards-mcp"
+  ],
+  [
+    "design-how-source",
+    "design.how: extract, map and migrate",
+    "Articles & guidance",
+    "saas banking commerce ai shared",
+    "Design-system methods adapted for semantic token mapping, source-backed documentation and one-component migration pilots.",
+    "Use when extracting a system or replacing hardcoded values with existing semantic tokens.",
+    "Map one component and prove that equal numeric values with different roles stay distinct.",
+    "MIT repository; methods adapted; themes, effects and execution helpers not imported",
+    "https://github.com/arla6ka/design.how"
+  ],
+  [
+    "brand-identity-source",
+    "Brand Identity Skill: coordinated production",
+    "Articles & guidance",
+    "commerce saas ai shared",
+    "Logo, typography and palette production adapted into the existing Brand Art Direction workflow.",
+    "Use when an identity needs practical language, contrast and small-size checks.",
+    "Refresh one requested identity part while preserving the parts marked keep.",
+    "MIT repository; instruction adaptation only; no fonts, assets or dependency helpers bundled",
+    "https://github.com/fatihaydost/brand-identity-skill"
+  ],
+  [
+    "skill-ui-dimensional-spec",
+    "UI dimensional specification skill",
+    "AI skills",
+    "saas banking commerce ai shared",
+    "Create component anatomy and dimension sheets with a source for each value and explicit unknowns.",
+    "Use for spacing, sizing and responsive geometry handoffs from tokens, code, Figma or measured renders.",
+    "Specify one component, render its sheet and check every dimension against its source.",
+    "Free complete skill ZIP; instruction checks completed; a real project pilot remains open",
+    "https://karimashraf666.github.io/resources/workbench/skills/ui-dimensional-spec/SKILL.md"
+  ]
+]
+resources.extend(design_source_resources)
+design_source_ids = {r[0] for r in design_source_resources}
+packaged_skill_folders.update({
+    "skill-ui-dimensional-spec": "ui-dimensional-spec",
+    "skill-design-loop": "design-loop",
+    "skill-agent-system": "agent-ready-design-system",
+    "skill-component-crd": "component-crd",
+})
+
 prompts = [
  ('states', 'Expand an interaction-state specification', 'Turn a bounded brief into a reviewable matrix of states and recovery paths.', '''Act as a product design partner. Use the supplied brief and existing component rules.
 Input: [user task], [platform], [existing pattern], [backend signals], [constraints].
@@ -259,8 +337,8 @@ for name, text in templates.items():
     (KIT / name).write_text(text, encoding='utf-8')
 
 packages = build_resource_packages(KIT, resources)
-catalog = [dict(zip(['id','name','type','industries','purpose','when','practice','access','url'], r)) | packages[i] | ({'checked':'2026-11-02'} if r[0] in video_integration_ids else {'checked':'2026-10-15'} if r[0] in claude_resource_ids else {}) for i,r in enumerate(resources)]
-(KIT / 'resource-catalog.json').write_text(json.dumps({'checked':'2026-10-12','catalogUpdated':'2026-11-02','resources':catalog}, indent=2, ensure_ascii=False), encoding='utf-8')
+catalog = [dict(zip(['id','name','type','industries','purpose','when','practice','access','url'], r)) | packages[i] | ({'checked':'2026-11-05'} if r[0] in design_source_ids else {'checked':'2026-11-02'} if r[0] in video_integration_ids else {'checked':'2026-10-15'} if r[0] in claude_resource_ids else {}) for i,r in enumerate(resources)]
+(KIT / 'resource-catalog.json').write_text(json.dumps({'checked':'2026-10-12','catalogUpdated':'2026-11-05','resources':catalog}, indent=2, ensure_ascii=False), encoding='utf-8')
 with (KIT / 'resource-catalog.csv').open('w', newline='', encoding='utf-8-sig') as f:
     writer = csv.writer(f)
     writer.writerow(['Resource','Type','Industries','Purpose','When to use','Team practice','Access','Source URL','Human worksheet','CSV template','AI agent guide'])

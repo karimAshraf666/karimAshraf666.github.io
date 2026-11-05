@@ -4,7 +4,7 @@ description: >
   Write, update, or build from a Component Reference/Requirements Document (CRD): one living,
   human-written, agent-readable file per UI component that carries requirements, decisions,
   rejected options, design notes, dev research and usage. Use for "new component", "add a
-  component", "spec this component", "CRD", "component requirements", "amend <component>",
+  component", "spec this component", "CRD", "component requirements", "amend a component",
   or before building any component in a design system. Read sibling CRDs first.
 ---
 
@@ -62,6 +62,8 @@ props tables, Figma-to-code mappings, cross-component rules (token wiring, globa
 naming, responsiveness belong in DESIGN.md / build skill once).
 
 ## Building from a CRD
+
+For measured anatomy/spacing handoff use ui-dimensional-spec and link its generated sheet here. Tokens/Figma/code retain visual values; the CRD retains requirements/decisions. Generate API docs from implementation, stories and actual uses; expose conflicts instead of rewriting requirements to match code.
 
 1. Check ready-for-dev. If not ready, stop and report what's missing.
 2. Generate tests from the IDs (one or more per ID; test names cite the ID).

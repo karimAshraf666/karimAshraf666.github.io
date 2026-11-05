@@ -1,6 +1,6 @@
 {
   "checked": "2026-10-12",
-  "catalogUpdated": "2026-11-02",
+  "catalogUpdated": "2026-11-05",
   "resources": [
     {
       "id": "confirmation",
@@ -956,6 +956,96 @@
       "csvTemplate": "resource-guides/skill-product-context-worksheet.csv",
       "agentGuide": "resource-guides/skill-product-context-agent.md",
       "checked": "2026-11-02"
+    },
+    {
+      "id": "oil-ui-source",
+      "name": "oil-ui: screenshot and task review",
+      "type": "Articles & guidance",
+      "industries": "saas commerce banking ai shared",
+      "purpose": "UI review methods adapted into Design Loop, with visual quality and observed task completion recorded separately.",
+      "when": "Use when reviewing screenshots, polishing an interface or checking a real user task.",
+      "practice": "Review one screen, then test one task and keep the two evidence records separate.",
+      "access": "MIT repository; instruction adaptation reviewed 5 November 2026; upstream scripts not installed",
+      "url": "https://github.com/oil-oil/oil-ui",
+      "humanTemplate": "resource-guides/oil-ui-source-worksheet.html",
+      "csvTemplate": "resource-guides/oil-ui-source-worksheet.csv",
+      "agentGuide": "resource-guides/oil-ui-source-agent.md",
+      "checked": "2026-11-05"
+    },
+    {
+      "id": "dimensional-drawing-source",
+      "name": "Dimensional drawing: UI specifications",
+      "type": "Articles & guidance",
+      "industries": "saas commerce banking ai shared",
+      "purpose": "A method for explaining component anatomy with dimension codes, source-linked values and responsive rules.",
+      "when": "Use when design and engineering need a measured component handoff.",
+      "practice": "Draw one component from its actual tokens and code; leave unavailable values marked TBD.",
+      "access": "MIT repository; static and motion methods adapted; templates and renderers not installed",
+      "url": "https://github.com/enesozturk/dimensional-drawing",
+      "humanTemplate": "resource-guides/dimensional-drawing-source-worksheet.html",
+      "csvTemplate": "resource-guides/dimensional-drawing-source-worksheet.csv",
+      "agentGuide": "resource-guides/dimensional-drawing-source-agent.md",
+      "checked": "2026-11-05"
+    },
+    {
+      "id": "awwwards-mcp-source",
+      "name": "Awwwards research and optional MCP",
+      "type": "Tools",
+      "industries": "commerce saas ai shared",
+      "purpose": "Website reference discovery with a public research recipe and a separate review of the optional connector.",
+      "when": "Use when studying a visual or motion mechanism for an existing brief.",
+      "practice": "Inspect one live reference and record the observed mechanism, transfer rule and assets to leave out.",
+      "access": "MIT repository; research recipe adopted; MCP server, CDP and automatic updates remain unconfigured",
+      "url": "https://github.com/INSANE0777/Awwwards-mcp",
+      "humanTemplate": "resource-guides/awwwards-mcp-source-worksheet.html",
+      "csvTemplate": "resource-guides/awwwards-mcp-source-worksheet.csv",
+      "agentGuide": "resource-guides/awwwards-mcp-source-agent.md",
+      "checked": "2026-11-05"
+    },
+    {
+      "id": "design-how-source",
+      "name": "design.how: extract, map and migrate",
+      "type": "Articles & guidance",
+      "industries": "saas banking commerce ai shared",
+      "purpose": "Design-system methods adapted for semantic token mapping, source-backed documentation and one-component migration pilots.",
+      "when": "Use when extracting a system or replacing hardcoded values with existing semantic tokens.",
+      "practice": "Map one component and prove that equal numeric values with different roles stay distinct.",
+      "access": "MIT repository; methods adapted; themes, effects and execution helpers not imported",
+      "url": "https://github.com/arla6ka/design.how",
+      "humanTemplate": "resource-guides/design-how-source-worksheet.html",
+      "csvTemplate": "resource-guides/design-how-source-worksheet.csv",
+      "agentGuide": "resource-guides/design-how-source-agent.md",
+      "checked": "2026-11-05"
+    },
+    {
+      "id": "brand-identity-source",
+      "name": "Brand Identity Skill: coordinated production",
+      "type": "Articles & guidance",
+      "industries": "commerce saas ai shared",
+      "purpose": "Logo, typography and palette production adapted into the existing Brand Art Direction workflow.",
+      "when": "Use when an identity needs practical language, contrast and small-size checks.",
+      "practice": "Refresh one requested identity part while preserving the parts marked keep.",
+      "access": "MIT repository; instruction adaptation only; no fonts, assets or dependency helpers bundled",
+      "url": "https://github.com/fatihaydost/brand-identity-skill",
+      "humanTemplate": "resource-guides/brand-identity-source-worksheet.html",
+      "csvTemplate": "resource-guides/brand-identity-source-worksheet.csv",
+      "agentGuide": "resource-guides/brand-identity-source-agent.md",
+      "checked": "2026-11-05"
+    },
+    {
+      "id": "skill-ui-dimensional-spec",
+      "name": "UI dimensional specification skill",
+      "type": "AI skills",
+      "industries": "saas banking commerce ai shared",
+      "purpose": "Create component anatomy and dimension sheets with a source for each value and explicit unknowns.",
+      "when": "Use for spacing, sizing and responsive geometry handoffs from tokens, code, Figma or measured renders.",
+      "practice": "Specify one component, render its sheet and check every dimension against its source.",
+      "access": "Free complete skill ZIP; instruction checks completed; a real project pilot remains open",
+      "url": "https://karimashraf666.github.io/resources/workbench/skills/ui-dimensional-spec/SKILL.md",
+      "humanTemplate": "resource-guides/skill-ui-dimensional-spec-worksheet.html",
+      "csvTemplate": "resource-guides/skill-ui-dimensional-spec-worksheet.csv",
+      "agentGuide": "resource-guides/skill-ui-dimensional-spec-agent.md",
+      "checked": "2026-11-05"
     }
   ]
 }

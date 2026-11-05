@@ -1,0 +1,10 @@
+﻿Section,Prompt,Response,Evidence,Owner,Next action
+Reference,Create component anatomy and dimension sheets with a source for each value and explicit unknowns.,https://karimashraf666.github.io/resources/workbench/skills/ui-dimensional-spec/SKILL.md,,,
+Team exercise,"Specify one component, render its sheet and check every dimension against its source.",,,,
+Review title,Name the bounded task.,,,,
+Owner and partners,"Who will do the work, review it and maintain the outcome?",,,,
+Source and measurement environment,"Record component, source revision, viewport, scale, theme, fonts and fixture content.",,,,
+Dimension table,"For each code record role, value or rule, provenance and declared/computed/observed/TBD status.",,,,
+Responsive geometry,Use HUG/FLEX/FILL where content controls geometry; list tested breakpoints.,,,,
+Drawing check,"Render and inspect labels, formulas and source correspondence; mark unavailable checks.",,,,
+Decision and next action,"What is agreed, what remains open, who owns it and when will it be reviewed?",,,,

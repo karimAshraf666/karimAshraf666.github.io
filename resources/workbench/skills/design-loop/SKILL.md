@@ -11,6 +11,8 @@ description: >
 
 # Design Loop
 
+For screenshot reviews, interface polish or task verification, read [references/screenshot-and-flow-review.md](references/screenshot-and-flow-review.md). Preserve review mode and separate visual findings from observed completion.
+
 Asking a model to "improve this design" ten times gives ten different designs. The loop
 fixes that by giving improvement a fixed target and independent judges.
 
